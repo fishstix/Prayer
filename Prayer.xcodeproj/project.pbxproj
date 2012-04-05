@@ -1,0 +1,565 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7290E26A1527C37B00CFA19E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7290E2691527C37B00CFA19E /* UIKit.framework */; };
+		7290E26C1527C37B00CFA19E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7290E26B1527C37B00CFA19E /* Foundation.framework */; };
+		7290E26E1527C37B00CFA19E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7290E26D1527C37B00CFA19E /* CoreGraphics.framework */; };
+		7290E2701527C37B00CFA19E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7290E26F1527C37B00CFA19E /* CoreData.framework */; };
+		7290E2761527C37B00CFA19E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7290E2741527C37B00CFA19E /* InfoPlist.strings */; };
+		7290E2781527C37B00CFA19E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7290E2771527C37B00CFA19E /* main.m */; };
+		7290E27C1527C37B00CFA19E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7290E27B1527C37B00CFA19E /* AppDelegate.m */; };
+		7290E27F1527C37B00CFA19E /* Prayer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7290E27D1527C37B00CFA19E /* Prayer.xcdatamodeld */; };
+		7290E2871527C37B00CFA19E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7290E2861527C37B00CFA19E /* SenTestingKit.framework */; };
+		7290E2881527C37B00CFA19E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7290E2691527C37B00CFA19E /* UIKit.framework */; };
+		7290E2891527C37B00CFA19E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7290E26B1527C37B00CFA19E /* Foundation.framework */; };
+		7290E28A1527C37B00CFA19E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7290E26F1527C37B00CFA19E /* CoreData.framework */; };
+		7290E2921527C37B00CFA19E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7290E2901527C37B00CFA19E /* InfoPlist.strings */; };
+		7290E2951527C37B00CFA19E /* PrayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7290E2941527C37B00CFA19E /* PrayerTests.m */; };
+		7290E2A11527C44C00CFA19E /* Prayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7290E2A01527C44C00CFA19E /* Prayer.m */; };
+		7290E2A71527C56C00CFA19E /* AppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7290E2A61527C56C00CFA19E /* AppViewController.m */; };
+		7290E2AB1527C59700CFA19E /* PrayersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7290E2A91527C59700CFA19E /* PrayersViewController.m */; };
+		7290E2AC1527C59700CFA19E /* PrayersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7290E2AA1527C59700CFA19E /* PrayersViewController.xib */; };
+		7290E2AF1527C64100CFA19E /* MasterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7290E2AE1527C64100CFA19E /* MasterController.m */; };
+		7290E2D11527C84A00CFA19E /* PrayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7290E2CF1527C84A00CFA19E /* PrayerViewController.m */; };
+		7290E2D21527C84A00CFA19E /* PrayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7290E2D01527C84A00CFA19E /* PrayerViewController.xib */; };
+		7290E2D61527CB8A00CFA19E /* AppView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7290E2D51527CB8900CFA19E /* AppView.m */; };
+		7290E2D91527CBAC00CFA19E /* PrayersTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7290E2D81527CBAC00CFA19E /* PrayersTableView.m */; };
+		7290E2DB1527CD3200CFA19E /* PrayersTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7290E2DA1527CD3200CFA19E /* PrayersTableView.xib */; };
+		7290E2DE1527D0B400CFA19E /* PrayerCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7290E2DD1527D0B400CFA19E /* PrayerCoreData.m */; };
+		7290E2E21527E3BA00CFA19E /* PrayerNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7290E2E11527E3BA00CFA19E /* PrayerNotificationManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7290E28B1527C37B00CFA19E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7290E25C1527C37A00CFA19E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7290E2641527C37B00CFA19E;
+			remoteInfo = Prayer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7290E2651527C37B00CFA19E /* Prayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7290E2691527C37B00CFA19E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7290E26B1527C37B00CFA19E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7290E26D1527C37B00CFA19E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7290E26F1527C37B00CFA19E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7290E2731527C37B00CFA19E /* Prayer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Prayer-Info.plist"; sourceTree = "<group>"; };
+		7290E2751527C37B00CFA19E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7290E2771527C37B00CFA19E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7290E2791527C37B00CFA19E /* Prayer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Prayer-Prefix.pch"; sourceTree = "<group>"; };
+		7290E27A1527C37B00CFA19E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7290E27B1527C37B00CFA19E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7290E27E1527C37B00CFA19E /* Prayer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Prayer.xcdatamodel; sourceTree = "<group>"; };
+		7290E2851527C37B00CFA19E /* PrayerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrayerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7290E2861527C37B00CFA19E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		7290E28F1527C37B00CFA19E /* PrayerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PrayerTests-Info.plist"; sourceTree = "<group>"; };
+		7290E2911527C37B00CFA19E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7290E2931527C37B00CFA19E /* PrayerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrayerTests.h; sourceTree = "<group>"; };
+		7290E2941527C37B00CFA19E /* PrayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrayerTests.m; sourceTree = "<group>"; };
+		7290E29F1527C44C00CFA19E /* Prayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prayer.h; sourceTree = "<group>"; };
+		7290E2A01527C44C00CFA19E /* Prayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Prayer.m; sourceTree = "<group>"; };
+		7290E2A51527C56C00CFA19E /* AppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppViewController.h; sourceTree = "<group>"; };
+		7290E2A61527C56C00CFA19E /* AppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppViewController.m; sourceTree = "<group>"; };
+		7290E2A81527C59700CFA19E /* PrayersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrayersViewController.h; sourceTree = "<group>"; };
+		7290E2A91527C59700CFA19E /* PrayersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrayersViewController.m; sourceTree = "<group>"; };
+		7290E2AA1527C59700CFA19E /* PrayersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrayersViewController.xib; sourceTree = "<group>"; };
+		7290E2AD1527C64100CFA19E /* MasterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterController.h; sourceTree = "<group>"; };
+		7290E2AE1527C64100CFA19E /* MasterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterController.m; sourceTree = "<group>"; };
+		7290E2CE1527C84A00CFA19E /* PrayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrayerViewController.h; sourceTree = "<group>"; };
+		7290E2CF1527C84A00CFA19E /* PrayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrayerViewController.m; sourceTree = "<group>"; };
+		7290E2D01527C84A00CFA19E /* PrayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrayerViewController.xib; sourceTree = "<group>"; };
+		7290E2D41527CB8900CFA19E /* AppView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppView.h; sourceTree = "<group>"; };
+		7290E2D51527CB8900CFA19E /* AppView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppView.m; sourceTree = "<group>"; };
+		7290E2D71527CBAC00CFA19E /* PrayersTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrayersTableView.h; sourceTree = "<group>"; };
+		7290E2D81527CBAC00CFA19E /* PrayersTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrayersTableView.m; sourceTree = "<group>"; };
+		7290E2DA1527CD3200CFA19E /* PrayersTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrayersTableView.xib; sourceTree = "<group>"; };
+		7290E2DC1527D0B400CFA19E /* PrayerCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrayerCoreData.h; sourceTree = "<group>"; };
+		7290E2DD1527D0B400CFA19E /* PrayerCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrayerCoreData.m; sourceTree = "<group>"; };
+		7290E2E01527E3BA00CFA19E /* PrayerNotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrayerNotificationManager.h; sourceTree = "<group>"; };
+		7290E2E11527E3BA00CFA19E /* PrayerNotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrayerNotificationManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7290E2621527C37B00CFA19E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7290E26A1527C37B00CFA19E /* UIKit.framework in Frameworks */,
+				7290E26C1527C37B00CFA19E /* Foundation.framework in Frameworks */,
+				7290E26E1527C37B00CFA19E /* CoreGraphics.framework in Frameworks */,
+				7290E2701527C37B00CFA19E /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7290E2811527C37B00CFA19E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7290E2871527C37B00CFA19E /* SenTestingKit.framework in Frameworks */,
+				7290E2881527C37B00CFA19E /* UIKit.framework in Frameworks */,
+				7290E2891527C37B00CFA19E /* Foundation.framework in Frameworks */,
+				7290E28A1527C37B00CFA19E /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7290E25A1527C37A00CFA19E = {
+			isa = PBXGroup;
+			children = (
+				7290E2711527C37B00CFA19E /* Prayer */,
+				7290E28D1527C37B00CFA19E /* PrayerTests */,
+				7290E2681527C37B00CFA19E /* Frameworks */,
+				7290E2661527C37B00CFA19E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7290E2661527C37B00CFA19E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7290E2651527C37B00CFA19E /* Prayer.app */,
+				7290E2851527C37B00CFA19E /* PrayerTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7290E2681527C37B00CFA19E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7290E2691527C37B00CFA19E /* UIKit.framework */,
+				7290E26B1527C37B00CFA19E /* Foundation.framework */,
+				7290E26D1527C37B00CFA19E /* CoreGraphics.framework */,
+				7290E26F1527C37B00CFA19E /* CoreData.framework */,
+				7290E2861527C37B00CFA19E /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7290E2711527C37B00CFA19E /* Prayer */ = {
+			isa = PBXGroup;
+			children = (
+				7290E2DF1527E39F00CFA19E /* Notification */,
+				7290E2A21527C45B00CFA19E /* Control */,
+				7290E29E1527C38800CFA19E /* Data */,
+				7290E27A1527C37B00CFA19E /* AppDelegate.h */,
+				7290E27B1527C37B00CFA19E /* AppDelegate.m */,
+				7290E2A51527C56C00CFA19E /* AppViewController.h */,
+				7290E2A61527C56C00CFA19E /* AppViewController.m */,
+				7290E2D41527CB8900CFA19E /* AppView.h */,
+				7290E2D51527CB8900CFA19E /* AppView.m */,
+				7290E27D1527C37B00CFA19E /* Prayer.xcdatamodeld */,
+				7290E2721527C37B00CFA19E /* Supporting Files */,
+			);
+			path = Prayer;
+			sourceTree = "<group>";
+		};
+		7290E2721527C37B00CFA19E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7290E2731527C37B00CFA19E /* Prayer-Info.plist */,
+				7290E2741527C37B00CFA19E /* InfoPlist.strings */,
+				7290E2771527C37B00CFA19E /* main.m */,
+				7290E2791527C37B00CFA19E /* Prayer-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7290E28D1527C37B00CFA19E /* PrayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				7290E2931527C37B00CFA19E /* PrayerTests.h */,
+				7290E2941527C37B00CFA19E /* PrayerTests.m */,
+				7290E28E1527C37B00CFA19E /* Supporting Files */,
+			);
+			path = PrayerTests;
+			sourceTree = "<group>";
+		};
+		7290E28E1527C37B00CFA19E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7290E28F1527C37B00CFA19E /* PrayerTests-Info.plist */,
+				7290E2901527C37B00CFA19E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7290E29E1527C38800CFA19E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				7290E29F1527C44C00CFA19E /* Prayer.h */,
+				7290E2A01527C44C00CFA19E /* Prayer.m */,
+				7290E2DC1527D0B400CFA19E /* PrayerCoreData.h */,
+				7290E2DD1527D0B400CFA19E /* PrayerCoreData.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		7290E2A21527C45B00CFA19E /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				7290E2A41527C47700CFA19E /* Navigation */,
+				7290E2A31527C46E00CFA19E /* ViewControllers */,
+				7290E2D31527CB5100CFA19E /* Views */,
+			);
+			name = Control;
+			sourceTree = "<group>";
+		};
+		7290E2A31527C46E00CFA19E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7290E2A81527C59700CFA19E /* PrayersViewController.h */,
+				7290E2A91527C59700CFA19E /* PrayersViewController.m */,
+				7290E2AA1527C59700CFA19E /* PrayersViewController.xib */,
+				7290E2CE1527C84A00CFA19E /* PrayerViewController.h */,
+				7290E2CF1527C84A00CFA19E /* PrayerViewController.m */,
+				7290E2D01527C84A00CFA19E /* PrayerViewController.xib */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7290E2A41527C47700CFA19E /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				7290E2AD1527C64100CFA19E /* MasterController.h */,
+				7290E2AE1527C64100CFA19E /* MasterController.m */,
+			);
+			name = Navigation;
+			sourceTree = "<group>";
+		};
+		7290E2D31527CB5100CFA19E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7290E2D71527CBAC00CFA19E /* PrayersTableView.h */,
+				7290E2D81527CBAC00CFA19E /* PrayersTableView.m */,
+				7290E2DA1527CD3200CFA19E /* PrayersTableView.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		7290E2DF1527E39F00CFA19E /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				7290E2E01527E3BA00CFA19E /* PrayerNotificationManager.h */,
+				7290E2E11527E3BA00CFA19E /* PrayerNotificationManager.m */,
+			);
+			name = Notification;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7290E2641527C37B00CFA19E /* Prayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7290E2981527C37B00CFA19E /* Build configuration list for PBXNativeTarget "Prayer" */;
+			buildPhases = (
+				7290E2611527C37B00CFA19E /* Sources */,
+				7290E2621527C37B00CFA19E /* Frameworks */,
+				7290E2631527C37B00CFA19E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Prayer;
+			productName = Prayer;
+			productReference = 7290E2651527C37B00CFA19E /* Prayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7290E2841527C37B00CFA19E /* PrayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7290E29B1527C37B00CFA19E /* Build configuration list for PBXNativeTarget "PrayerTests" */;
+			buildPhases = (
+				7290E2801527C37B00CFA19E /* Sources */,
+				7290E2811527C37B00CFA19E /* Frameworks */,
+				7290E2821527C37B00CFA19E /* Resources */,
+				7290E2831527C37B00CFA19E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7290E28C1527C37B00CFA19E /* PBXTargetDependency */,
+			);
+			name = PrayerTests;
+			productName = PrayerTests;
+			productReference = 7290E2851527C37B00CFA19E /* PrayerTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7290E25C1527C37A00CFA19E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 7290E25F1527C37A00CFA19E /* Build configuration list for PBXProject "Prayer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7290E25A1527C37A00CFA19E;
+			productRefGroup = 7290E2661527C37B00CFA19E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7290E2641527C37B00CFA19E /* Prayer */,
+				7290E2841527C37B00CFA19E /* PrayerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7290E2631527C37B00CFA19E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7290E2761527C37B00CFA19E /* InfoPlist.strings in Resources */,
+				7290E2AC1527C59700CFA19E /* PrayersViewController.xib in Resources */,
+				7290E2D21527C84A00CFA19E /* PrayerViewController.xib in Resources */,
+				7290E2DB1527CD3200CFA19E /* PrayersTableView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7290E2821527C37B00CFA19E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7290E2921527C37B00CFA19E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7290E2831527C37B00CFA19E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7290E2611527C37B00CFA19E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7290E2781527C37B00CFA19E /* main.m in Sources */,
+				7290E27C1527C37B00CFA19E /* AppDelegate.m in Sources */,
+				7290E27F1527C37B00CFA19E /* Prayer.xcdatamodeld in Sources */,
+				7290E2A11527C44C00CFA19E /* Prayer.m in Sources */,
+				7290E2A71527C56C00CFA19E /* AppViewController.m in Sources */,
+				7290E2AB1527C59700CFA19E /* PrayersViewController.m in Sources */,
+				7290E2AF1527C64100CFA19E /* MasterController.m in Sources */,
+				7290E2D11527C84A00CFA19E /* PrayerViewController.m in Sources */,
+				7290E2D61527CB8A00CFA19E /* AppView.m in Sources */,
+				7290E2D91527CBAC00CFA19E /* PrayersTableView.m in Sources */,
+				7290E2DE1527D0B400CFA19E /* PrayerCoreData.m in Sources */,
+				7290E2E21527E3BA00CFA19E /* PrayerNotificationManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7290E2801527C37B00CFA19E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7290E2951527C37B00CFA19E /* PrayerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7290E28C1527C37B00CFA19E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7290E2641527C37B00CFA19E /* Prayer */;
+			targetProxy = 7290E28B1527C37B00CFA19E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7290E2741527C37B00CFA19E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7290E2751527C37B00CFA19E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7290E2901527C37B00CFA19E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7290E2911527C37B00CFA19E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7290E2961527C37B00CFA19E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7290E2971527C37B00CFA19E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7290E2991527C37B00CFA19E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Prayer/Prayer-Prefix.pch";
+				INFOPLIST_FILE = "Prayer/Prayer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7290E29A1527C37B00CFA19E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Prayer/Prayer-Prefix.pch";
+				INFOPLIST_FILE = "Prayer/Prayer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		7290E29C1527C37B00CFA19E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Prayer.app/Prayer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Prayer/Prayer-Prefix.pch";
+				INFOPLIST_FILE = "PrayerTests/PrayerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		7290E29D1527C37B00CFA19E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Prayer.app/Prayer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Prayer/Prayer-Prefix.pch";
+				INFOPLIST_FILE = "PrayerTests/PrayerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7290E25F1527C37A00CFA19E /* Build configuration list for PBXProject "Prayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7290E2961527C37B00CFA19E /* Debug */,
+				7290E2971527C37B00CFA19E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7290E2981527C37B00CFA19E /* Build configuration list for PBXNativeTarget "Prayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7290E2991527C37B00CFA19E /* Debug */,
+				7290E29A1527C37B00CFA19E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7290E29B1527C37B00CFA19E /* Build configuration list for PBXNativeTarget "PrayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7290E29C1527C37B00CFA19E /* Debug */,
+				7290E29D1527C37B00CFA19E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7290E27D1527C37B00CFA19E /* Prayer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7290E27E1527C37B00CFA19E /* Prayer.xcdatamodel */,
+			);
+			currentVersion = 7290E27E1527C37B00CFA19E /* Prayer.xcdatamodel */;
+			path = Prayer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 7290E25C1527C37A00CFA19E /* Project object */;
+}
