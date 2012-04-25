@@ -11,17 +11,28 @@
 #import "PrayersViewController.h"
 #import "PrayerViewController.h"
 
+#import "MenuViewController.h"
+#import "QuoteViewController.h"
+
 static MasterController *sharedInstance = NULL;
 
 @interface MasterController()
 @property (nonatomic, retain) UIViewController *rootViewController;
 @property (nonatomic, retain) UINavigationController *rootNavigationController;
+@property (nonatomic, retain) MKDSlideViewController *slideController;
 @end
 
 @implementation MasterController
 
 @synthesize rootViewController = _rootViewController;
-@synthesize rootNavigationController = _rootNavigationController;
+//@synthesize rootNavigationController = _rootNavigationController;
+@synthesize slideController = _slideController;
+@dynamic rootNavigationController;
+
+- (UINavigationController*) rootNavigationController
+{
+    return (UINavigationController*) self.slideController.mainViewController;
+}
 
 - (id) initWithAppWindow:(UIWindow *)window
 {
@@ -31,9 +42,16 @@ static MasterController *sharedInstance = NULL;
         PrayersViewController *rootViewController = [[PrayersViewController alloc] initWithNibName:@"PrayersViewController" bundle:nil];
         self.rootViewController = rootViewController;
         
-        self.rootNavigationController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+        self.slideController = [[MKDSlideViewController alloc] initWithRootViewController:self.rootViewController];
+
+        // Left
+        MenuViewController *menuViewController = [[MenuViewController alloc] initWithNibName:@"MenuViewController" bundle:nil];
+        // Right
+        QuoteViewController *quoteViewController = [[QuoteViewController alloc] initWithNibName:@"QuoteViewController" bundle:nil];
         
-        [window setRootViewController:self.rootNavigationController];
+        [self.slideController setLeftViewController:menuViewController rightViewController:quoteViewController];
+        
+        [window setRootViewController:self.slideController];
     }
     
     return sharedInstance;

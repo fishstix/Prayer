@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PrayersPaginatedScrollView : UIView
+@interface PrayersPaginatedScrollView : UIView {
+    
+    UIScrollView *_scrollView;
+    
+    NSMutableArray *_tableViews;
+    
+}
+
+@property (nonatomic, retain) UIScrollView *scrollView;
+@property (nonatomic, retain) NSMutableArray *tableViews;
 
 @end

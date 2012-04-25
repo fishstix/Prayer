@@ -10,6 +10,7 @@
 
 #import "MasterController.h"
 #import "Prayer.h"
+#import "PrayerCoreData.h"
 #import "PrayerViewController.h"
 
 @implementation PrayersTableView
@@ -40,8 +41,23 @@
     [super awakeFromNib];
     
     [self.prayersTableView setFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
-    
+     
     [self addObserver:self forKeyPath:@"prayers" options:NSKeyValueChangeReplacement context:NULL];
+}
+
+- (id) initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    
+    if (self) {
+        NSArray *nibViews = [[NSBundle mainBundle] loadNibNamed:@"PrayersTableView" owner:self options:nil];
+        [self addSubview:[nibViews objectAtIndex:0]];
+        
+        [self setPrayers:[[PrayerCoreData sharedPrayerData] allPrayers]];
+//        self.prayers = [NSArray array];
+    }
+    
+    return self;
 }
          
 - (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context

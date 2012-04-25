@@ -10,4 +10,8 @@
 
 @interface PrayerCategory : NSObject
 
++ (void) addCategory:(NSString*)prayerCategory;
++ (void) removeCategory:(NSString*)prayerCategory;
++ (NSArray*) getCategories;
+
 @end

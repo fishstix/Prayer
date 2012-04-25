@@ -30,7 +30,7 @@
 {
     [super viewDidAppear:animated];
     
-    [self.prayersTableView setPrayers:[[PrayerCoreData sharedPrayerData] allPrayers]];
+    //[self.prayersTableView setPrayers:[[PrayerCoreData sharedPrayerData] allPrayers]];
 }
 
 #pragma mark -
@@ -39,7 +39,7 @@
 - (IBAction)addPrayer:(id)sender
 {
     [[PrayerCoreData sharedPrayerData] newPrayer];
-    [self.prayersTableView setPrayers:[[PrayerCoreData sharedPrayerData] allPrayers]];
+  //  [self.prayersTableView setPrayers:[[PrayerCoreData sharedPrayerData] allPrayers]];
 }
 
 @end

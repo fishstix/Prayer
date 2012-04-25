@@ -10,4 +10,7 @@
 
 @interface AppView : UIView
 
+- (void) viewDidAppear;
+- (void) viewDidDisappear;
+
 @end

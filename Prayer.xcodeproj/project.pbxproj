@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7287202E153421FC0019E5D6 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7287202C153421FC0019E5D6 /* MenuViewController.m */; };
+		7287202F153421FC0019E5D6 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7287202D153421FC0019E5D6 /* MenuViewController.xib */; };
+		72872032153428920019E5D6 /* PrayersPaginatedScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72872031153428920019E5D6 /* PrayersPaginatedScrollView.m */; };
 		7290E26A1527C37B00CFA19E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7290E2691527C37B00CFA19E /* UIKit.framework */; };
 		7290E26C1527C37B00CFA19E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7290E26B1527C37B00CFA19E /* Foundation.framework */; };
 		7290E26E1527C37B00CFA19E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7290E26D1527C37B00CFA19E /* CoreGraphics.framework */; };
@@ -33,6 +36,15 @@
 		7290E2DB1527CD3200CFA19E /* PrayersTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7290E2DA1527CD3200CFA19E /* PrayersTableView.xib */; };
 		7290E2DE1527D0B400CFA19E /* PrayerCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7290E2DD1527D0B400CFA19E /* PrayerCoreData.m */; };
 		7290E2E21527E3BA00CFA19E /* PrayerNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7290E2E11527E3BA00CFA19E /* PrayerNotificationManager.m */; };
+		72E67293153570330023D88C /* QuoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E67291153570330023D88C /* QuoteViewController.m */; };
+		72E67294153570330023D88C /* QuoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72E67292153570330023D88C /* QuoteViewController.xib */; };
+		72E67297153D582E0023D88C /* PrayerCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E67296153D582E0023D88C /* PrayerCategory.m */; };
+		72E6729A153D5B050023D88C /* AddPrayerCategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E67299153D5B040023D88C /* AddPrayerCategoryView.m */; };
+		72E6729C153D5B210023D88C /* AddPrayerCategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72E6729B153D5B210023D88C /* AddPrayerCategoryView.xib */; };
+		72F35274153419F900DA8F81 /* MKDSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F35273153419F900DA8F81 /* MKDSlideViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		72F3527815341A2000DA8F81 /* ButtonMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 72F3527615341A2000DA8F81 /* ButtonMenu.png */; };
+		72F3527915341A2000DA8F81 /* ButtonMenu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72F3527715341A2000DA8F81 /* ButtonMenu@2x.png */; };
+		72F3528315341B4200DA8F81 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F3528215341B4200DA8F81 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +58,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7287202B153421FC0019E5D6 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		7287202C153421FC0019E5D6 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		7287202D153421FC0019E5D6 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		72872030153428920019E5D6 /* PrayersPaginatedScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrayersPaginatedScrollView.h; sourceTree = "<group>"; };
+		72872031153428920019E5D6 /* PrayersPaginatedScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrayersPaginatedScrollView.m; sourceTree = "<group>"; };
 		7290E2651527C37B00CFA19E /* Prayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7290E2691527C37B00CFA19E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7290E26B1527C37B00CFA19E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -85,6 +102,19 @@
 		7290E2DD1527D0B400CFA19E /* PrayerCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrayerCoreData.m; sourceTree = "<group>"; };
 		7290E2E01527E3BA00CFA19E /* PrayerNotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrayerNotificationManager.h; sourceTree = "<group>"; };
 		7290E2E11527E3BA00CFA19E /* PrayerNotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrayerNotificationManager.m; sourceTree = "<group>"; };
+		72E67290153570330023D88C /* QuoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuoteViewController.h; sourceTree = "<group>"; };
+		72E67291153570330023D88C /* QuoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuoteViewController.m; sourceTree = "<group>"; };
+		72E67292153570330023D88C /* QuoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuoteViewController.xib; sourceTree = "<group>"; };
+		72E67295153D582E0023D88C /* PrayerCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrayerCategory.h; sourceTree = "<group>"; };
+		72E67296153D582E0023D88C /* PrayerCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrayerCategory.m; sourceTree = "<group>"; };
+		72E67298153D5B040023D88C /* AddPrayerCategoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPrayerCategoryView.h; sourceTree = "<group>"; };
+		72E67299153D5B040023D88C /* AddPrayerCategoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPrayerCategoryView.m; sourceTree = "<group>"; };
+		72E6729B153D5B210023D88C /* AddPrayerCategoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddPrayerCategoryView.xib; sourceTree = "<group>"; };
+		72F35272153419F900DA8F81 /* MKDSlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MKDSlideViewController.h; path = ../../mkdslideviewcontroller/MKDSlideViewController.h; sourceTree = "<group>"; };
+		72F35273153419F900DA8F81 /* MKDSlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MKDSlideViewController.m; path = ../../mkdslideviewcontroller/MKDSlideViewController.m; sourceTree = "<group>"; };
+		72F3527615341A2000DA8F81 /* ButtonMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ButtonMenu.png; path = ../../mkdslideviewcontroller/Images/ButtonMenu.png; sourceTree = "<group>"; };
+		72F3527715341A2000DA8F81 /* ButtonMenu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ButtonMenu@2x.png"; path = "../../mkdslideviewcontroller/Images/ButtonMenu@2x.png"; sourceTree = "<group>"; };
+		72F3528215341B4200DA8F81 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72F3528315341B4200DA8F81 /* QuartzCore.framework in Frameworks */,
 				7290E26A1527C37B00CFA19E /* UIKit.framework in Frameworks */,
 				7290E26C1527C37B00CFA19E /* Foundation.framework in Frameworks */,
 				7290E26E1527C37B00CFA19E /* CoreGraphics.framework in Frameworks */,
@@ -116,6 +147,7 @@
 		7290E25A1527C37A00CFA19E = {
 			isa = PBXGroup;
 			children = (
+				72F3528215341B4200DA8F81 /* QuartzCore.framework */,
 				7290E2711527C37B00CFA19E /* Prayer */,
 				7290E28D1527C37B00CFA19E /* PrayerTests */,
 				7290E2681527C37B00CFA19E /* Frameworks */,
@@ -147,6 +179,7 @@
 		7290E2711527C37B00CFA19E /* Prayer */ = {
 			isa = PBXGroup;
 			children = (
+				72F3526A1534198900DA8F81 /* lib */,
 				7290E2DF1527E39F00CFA19E /* Notification */,
 				7290E2A21527C45B00CFA19E /* Control */,
 				7290E29E1527C38800CFA19E /* Data */,
@@ -199,6 +232,8 @@
 				7290E2A01527C44C00CFA19E /* Prayer.m */,
 				7290E2DC1527D0B400CFA19E /* PrayerCoreData.h */,
 				7290E2DD1527D0B400CFA19E /* PrayerCoreData.m */,
+				72E67295153D582E0023D88C /* PrayerCategory.h */,
+				72E67296153D582E0023D88C /* PrayerCategory.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -216,12 +251,16 @@
 		7290E2A31527C46E00CFA19E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				72E6728F153570120023D88C /* Quote */,
 				7290E2A81527C59700CFA19E /* PrayersViewController.h */,
 				7290E2A91527C59700CFA19E /* PrayersViewController.m */,
 				7290E2AA1527C59700CFA19E /* PrayersViewController.xib */,
 				7290E2CE1527C84A00CFA19E /* PrayerViewController.h */,
 				7290E2CF1527C84A00CFA19E /* PrayerViewController.m */,
 				7290E2D01527C84A00CFA19E /* PrayerViewController.xib */,
+				7287202B153421FC0019E5D6 /* MenuViewController.h */,
+				7287202C153421FC0019E5D6 /* MenuViewController.m */,
+				7287202D153421FC0019E5D6 /* MenuViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -241,6 +280,11 @@
 				7290E2D71527CBAC00CFA19E /* PrayersTableView.h */,
 				7290E2D81527CBAC00CFA19E /* PrayersTableView.m */,
 				7290E2DA1527CD3200CFA19E /* PrayersTableView.xib */,
+				72872030153428920019E5D6 /* PrayersPaginatedScrollView.h */,
+				72872031153428920019E5D6 /* PrayersPaginatedScrollView.m */,
+				72E67298153D5B040023D88C /* AddPrayerCategoryView.h */,
+				72E67299153D5B040023D88C /* AddPrayerCategoryView.m */,
+				72E6729B153D5B210023D88C /* AddPrayerCategoryView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -252,6 +296,43 @@
 				7290E2E11527E3BA00CFA19E /* PrayerNotificationManager.m */,
 			);
 			name = Notification;
+			sourceTree = "<group>";
+		};
+		72E6728F153570120023D88C /* Quote */ = {
+			isa = PBXGroup;
+			children = (
+				72E67290153570330023D88C /* QuoteViewController.h */,
+				72E67291153570330023D88C /* QuoteViewController.m */,
+				72E67292153570330023D88C /* QuoteViewController.xib */,
+			);
+			name = Quote;
+			sourceTree = "<group>";
+		};
+		72F3526A1534198900DA8F81 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				72F35271153419E100DA8F81 /* MKDSlideControl */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
+		72F35271153419E100DA8F81 /* MKDSlideControl */ = {
+			isa = PBXGroup;
+			children = (
+				72F3527515341A0E00DA8F81 /* Images */,
+				72F35272153419F900DA8F81 /* MKDSlideViewController.h */,
+				72F35273153419F900DA8F81 /* MKDSlideViewController.m */,
+			);
+			name = MKDSlideControl;
+			sourceTree = "<group>";
+		};
+		72F3527515341A0E00DA8F81 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				72F3527615341A2000DA8F81 /* ButtonMenu.png */,
+				72F3527715341A2000DA8F81 /* ButtonMenu@2x.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,6 +409,11 @@
 				7290E2AC1527C59700CFA19E /* PrayersViewController.xib in Resources */,
 				7290E2D21527C84A00CFA19E /* PrayerViewController.xib in Resources */,
 				7290E2DB1527CD3200CFA19E /* PrayersTableView.xib in Resources */,
+				72F3527815341A2000DA8F81 /* ButtonMenu.png in Resources */,
+				72F3527915341A2000DA8F81 /* ButtonMenu@2x.png in Resources */,
+				7287202F153421FC0019E5D6 /* MenuViewController.xib in Resources */,
+				72E67294153570330023D88C /* QuoteViewController.xib in Resources */,
+				72E6729C153D5B210023D88C /* AddPrayerCategoryView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +460,12 @@
 				7290E2D91527CBAC00CFA19E /* PrayersTableView.m in Sources */,
 				7290E2DE1527D0B400CFA19E /* PrayerCoreData.m in Sources */,
 				7290E2E21527E3BA00CFA19E /* PrayerNotificationManager.m in Sources */,
+				72F35274153419F900DA8F81 /* MKDSlideViewController.m in Sources */,
+				7287202E153421FC0019E5D6 /* MenuViewController.m in Sources */,
+				72872032153428920019E5D6 /* PrayersPaginatedScrollView.m in Sources */,
+				72E67293153570330023D88C /* QuoteViewController.m in Sources */,
+				72E67297153D582E0023D88C /* PrayerCategory.m in Sources */,
+				72E6729A153D5B050023D88C /* AddPrayerCategoryView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,7 +513,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Charles Fisher (34DN757Z32)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -436,6 +528,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "17BC89CD-463D-4746-A735-72CEECE6CD81";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -447,7 +540,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Charles Fisher (34DN757Z32)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -456,6 +549,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "17BC89CD-463D-4746-A735-72CEECE6CD81";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -537,6 +631,7 @@
 				7290E29A1527C37B00CFA19E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7290E29B1527C37B00CFA19E /* Build configuration list for PBXNativeTarget "PrayerTests" */ = {
 			isa = XCConfigurationList;
@@ -545,6 +640,7 @@
 				7290E29D1527C37B00CFA19E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -9,5 +9,12 @@
 #import "AppView.h"
 
 @interface AddPrayerCategoryView : AppView
+{
+    UITextField *_categoryTextField;
+}
+
+@property (nonatomic, retain) IBOutlet UITextField *categoryTextField;
+
+- (IBAction)addCategory:(id)sender;
 
 @end

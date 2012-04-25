@@ -10,9 +10,12 @@
 
 #import "Prayer.h"
 
+#import "MKDSlideViewController.h"
+
 @interface MasterController : NSObject {
     UIViewController *_rootViewController;
     UINavigationController *_rootNavigationController;
+    MKDSlideViewController *_slideController;
 }
 
 - (id) initWithAppWindow:(UIWindow*)window;

@@ -8,24 +8,64 @@
 
 #import "AddPrayerCategoryView.h"
 
+#import "PrayerCategory.h"
+
 @implementation AddPrayerCategoryView
 
-- (id)initWithFrame:(CGRect)frame
+@synthesize categoryTextField = _categoryTextField;
+
+- (id) initWithCoder:(NSCoder *)aDecoder
 {
-    self = [super initWithFrame:frame];
+    self = [super initWithCoder:aDecoder];
+    
     if (self) {
-        // Initialization code
+        NSArray *nibViews = [[NSBundle mainBundle] loadNibNamed:@"AddPrayerCategoryView" owner:self options:nil];
+        [self addSubview:[nibViews objectAtIndex:0]];
+        
     }
+    
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
+- (id) initWithFrame:(CGRect)frame
 {
-    // Drawing code
+    self = [super initWithFrame:frame];
+    
+    if (self) {
+        NSArray *nibViews = [[NSBundle mainBundle] loadNibNamed:@"AddPrayerCategoryView" owner:self options:nil];
+        [self addSubview:[nibViews objectAtIndex:0]];
+        
+    }
+    
+    return self;
 }
-*/
+
+#pragma mark -
+#pragma mark View Lifecycle
+
+- (void) viewDidAppear
+{
+    [self.categoryTextField becomeFirstResponder];
+}
+
+- (void) viewDidDisappear
+{
+    [self.categoryTextField resignFirstResponder];
+}
+
+
+#pragma mark -
+#pragma mark Logic
+
+- (IBAction)addCategory:(id)sender
+{
+    NSString *newCategory = self.categoryTextField.text;
+    [PrayerCategory addCategory:newCategory];
+
+#warning Handle null cases
+    
+    [self.categoryTextField resignFirstResponder];
+}
+
 
 @end

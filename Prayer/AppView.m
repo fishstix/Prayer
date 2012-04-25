@@ -10,4 +10,14 @@
 
 @implementation AppView
 
+- (void) viewDidAppear
+{
+    
+}
+
+- (void) viewDidDisappear
+{
+    
+}
+
 @end
