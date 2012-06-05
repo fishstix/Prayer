@@ -124,10 +124,10 @@
 		72E672AE154CD7380023D88C /* PrayersCategoryTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrayersCategoryTableHeaderView.h; sourceTree = "<group>"; };
 		72E672AF154CD7380023D88C /* PrayersCategoryTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrayersCategoryTableHeaderView.m; sourceTree = "<group>"; };
 		72E672B1154CD7950023D88C /* PrayersCategoryTableHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrayersCategoryTableHeaderView.xib; sourceTree = "<group>"; };
-		72F35272153419F900DA8F81 /* MKDSlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MKDSlideViewController.h; path = ../../mkdslideviewcontroller/MKDSlideViewController.h; sourceTree = "<group>"; };
-		72F35273153419F900DA8F81 /* MKDSlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MKDSlideViewController.m; path = ../../mkdslideviewcontroller/MKDSlideViewController.m; sourceTree = "<group>"; };
-		72F3527615341A2000DA8F81 /* ButtonMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ButtonMenu.png; path = ../../mkdslideviewcontroller/Images/ButtonMenu.png; sourceTree = "<group>"; };
-		72F3527715341A2000DA8F81 /* ButtonMenu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ButtonMenu@2x.png"; path = "../../mkdslideviewcontroller/Images/ButtonMenu@2x.png"; sourceTree = "<group>"; };
+		72F35272153419F900DA8F81 /* MKDSlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MKDSlideViewController.h; path = ../mkdslideviewcontroller/MKDSlideViewController.h; sourceTree = "<group>"; };
+		72F35273153419F900DA8F81 /* MKDSlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MKDSlideViewController.m; path = ../mkdslideviewcontroller/MKDSlideViewController.m; sourceTree = "<group>"; };
+		72F3527615341A2000DA8F81 /* ButtonMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ButtonMenu.png; path = ../mkdslideviewcontroller/Images/ButtonMenu.png; sourceTree = "<group>"; };
+		72F3527715341A2000DA8F81 /* ButtonMenu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ButtonMenu@2x.png"; path = "../mkdslideviewcontroller/Images/ButtonMenu@2x.png"; sourceTree = "<group>"; };
 		72F3528215341B4200DA8F81 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -161,7 +161,6 @@
 		7290E25A1527C37A00CFA19E = {
 			isa = PBXGroup;
 			children = (
-				72F3528215341B4200DA8F81 /* QuartzCore.framework */,
 				7290E2711527C37B00CFA19E /* Prayer */,
 				7290E28D1527C37B00CFA19E /* PrayerTests */,
 				7290E2681527C37B00CFA19E /* Frameworks */,
@@ -181,6 +180,7 @@
 		7290E2681527C37B00CFA19E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				72F3528215341B4200DA8F81 /* QuartzCore.framework */,
 				7290E2691527C37B00CFA19E /* UIKit.framework */,
 				7290E26B1527C37B00CFA19E /* Foundation.framework */,
 				7290E26D1527C37B00CFA19E /* CoreGraphics.framework */,
