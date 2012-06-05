@@ -107,13 +107,6 @@ static PrayerCoreData *sharedInstance = NULL;
         [request setPredicate:categoryPredicate];
     }
     
-    // Set example predicate and sort orderings...
-    // TODO none needed?    
-    
-//    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc]
-//                                        initWithKey:@"firstName" ascending:YES];
-//    [request setSortDescriptors:[NSArray arrayWithObject:sortDescriptor]];
-    
     NSError *error = nil;
     NSArray *array = [moc executeFetchRequest:request error:&error];
     if (error) {
