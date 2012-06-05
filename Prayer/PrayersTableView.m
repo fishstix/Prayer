@@ -16,7 +16,7 @@
 #import "PrayerViewController.h"
 
 @interface PrayersTableView()
-- (void) didAddPrayer:(NSNotification*)notification;
+- (void) didUpdatePrayers:(NSNotification*)notification;
 @end
 
 @implementation PrayersTableView
@@ -24,6 +24,14 @@
 @synthesize prayersTableView = _prayersTableView;
 @synthesize category = _category;
 @synthesize prayers = _prayers;
+@synthesize editing = _editing;
+
+- (void) setEditing:(BOOL)editing
+{
+    _editing = editing;
+    
+    [self.prayersTableView setEditing:editing animated:YES];
+}
 
 - (void) awakeFromNib 
 {
@@ -54,7 +62,9 @@
         [self.prayersTableView setTableFooterView:[[UIView alloc] init]];
         
         // Observe
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didAddPrayer:) name:kDidAddPrayer object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didUpdatePrayers:) name:kDidAddPrayer object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didUpdatePrayers:) name:kDidRemovePrayer object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didUpdatePrayers:) name:kDidUpdatePrayer object:nil];
     }
     
     return self;
@@ -68,7 +78,7 @@
 #pragma mark -
 #pragma mark Data
 
-- (void) didAddPrayer:(NSNotification *)notification
+- (void) didUpdatePrayers:(NSNotification *)notification
 {
     self.prayers = [[PrayerCoreData sharedPrayerData] allPrayersForCategory:self.category];
     [self.prayersTableView reloadData];
@@ -115,6 +125,13 @@
     [[MasterController sharedMasterController] pushController:prayerController];
     
     [[tableView cellForRowAtIndexPath:indexPath] setSelected:NO animated:YES];
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        Prayer *prayer = [self.prayers objectAtIndex:indexPath.row];
+        [[PrayerCoreData sharedPrayerData] deletePrayer:prayer];
+    }
 }
 
 @end

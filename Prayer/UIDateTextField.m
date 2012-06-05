@@ -41,7 +41,6 @@
         [self.delegate textFieldDidBeginEditing:(UITextField*)self.parent];
     }
     
-    self.parent.layer.borderWidth = 2.0f;
     self.parent.layer.borderColor = [[UIColor darkGrayColor] CGColor];
 }
 
@@ -58,7 +57,7 @@
         [self.delegate textFieldDidEndEditing:(UITextField*)self.parent];
     }
     
-    self.parent.layer.borderColor = [[UIColor clearColor] CGColor];
+    self.parent.layer.borderColor = [[UIColor lightGrayColor] CGColor];
 }
 
 // Edit
@@ -206,6 +205,10 @@
     [firstResponderButton setFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
     [firstResponderButton addTarget:self action:@selector(becomeFirstResponder) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:firstResponderButton];
+    
+    // Border
+    self.layer.borderWidth = 2.0f;
+    self.layer.borderColor = [[UIColor lightGrayColor] CGColor];
 }
 
 - (void) datePickerValueChanged:(id)sender {

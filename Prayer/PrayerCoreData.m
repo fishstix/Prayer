@@ -13,6 +13,7 @@
 
 NSString *const kDidAddPrayer = @"DidAddPrayer";
 NSString *const kDidRemovePrayer = @"DidRemovePrayer";
+NSString *const kDidUpdatePrayer = @"DidUpdatePrayer";
 
 static PrayerCoreData *sharedInstance = NULL;
 
@@ -120,6 +121,21 @@ static PrayerCoreData *sharedInstance = NULL;
         return [NSArray array];
     }
     return array;
+}
+
+- (void) updatePrayer:(Prayer *)prayer
+{
+    [self save];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kDidUpdatePrayer object:prayer];
+}
+
+- (void) deletePrayer:(Prayer *)prayer
+{
+    [self.managedObjectContext deleteObject:prayer];
+    
+    [self save];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:kDidRemovePrayer object:nil];
 }
 
 - (void) save

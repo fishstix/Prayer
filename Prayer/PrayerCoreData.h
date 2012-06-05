@@ -12,6 +12,7 @@
 
 extern NSString *const kDidAddPrayer;
 extern NSString *const kDidRemovePrayer;
+extern NSString *const kDidUpdatePrayer;
 
 @interface PrayerCoreData : NSObject
 
@@ -22,6 +23,8 @@ extern NSString *const kDidRemovePrayer;
 - (Prayer*) prayerFromURI:(NSString*)URI;
 - (NSArray*) allPrayers;
 - (NSArray*) allPrayersForCategory:(NSString*)category;
+- (void) updatePrayer:(Prayer*)prayer;
+- (void) deletePrayer:(Prayer*)prayer;
 - (void) save;
 
 @end

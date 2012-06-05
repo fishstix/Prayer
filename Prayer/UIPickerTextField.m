@@ -41,7 +41,6 @@
         [self.delegate textFieldDidBeginEditing:(UITextField*)self.parent];
     }
     
-    self.parent.layer.borderWidth = 2.0f;
     self.parent.layer.borderColor = [[UIColor darkGrayColor] CGColor];
 }
 
@@ -58,7 +57,7 @@
         [self.delegate textFieldDidEndEditing:(UITextField*)self.parent];
     }
     
-    self.parent.layer.borderColor = [[UIColor clearColor] CGColor];
+    self.parent.layer.borderColor = [[UIColor lightGrayColor] CGColor];
 }
 
 // Edit
@@ -119,11 +118,17 @@
 }
 
 - (NSString*) text {
-    return @"";
+    return self.pickerTextView.text;
 }
 
 - (void) setText:(NSString *)text {
     //
+    int index = [self.pickerValues indexOfObject:text];
+    if (index != NSNotFound) {
+        [self.picker selectRow:index inComponent:0 animated:NO];
+    }
+    
+    [self.pickerTextView setText:text];
 }
 
 - (void) setTag:(NSInteger)tag {
@@ -184,6 +189,10 @@
     [self addSubview:firstResponderButton];
     
     self.pickerValues = [NSArray array];
+    
+    // Border
+    self.layer.borderWidth = 2.0f;
+    self.layer.borderColor = [[UIColor lightGrayColor] CGColor];
 }
 
 - (BOOL) becomeFirstResponder {

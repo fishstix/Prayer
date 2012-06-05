@@ -8,18 +8,18 @@
 
 #import "AppViewController.h"
 
-#import "PrayersTableView.h"
+#import "PrayersPaginatedScrollView.h"
 
 @interface PrayersViewController : AppViewController {
-    PrayersTableView *_prayersTableView;
+    PrayersPaginatedScrollView *_prayersScrollView;
 
-//    NSArray *_prayers;
+    UIBarButtonItem *_editButton;
+    UIBarButtonItem *_doneButton;
 }
 
-@property (nonatomic, retain) IBOutlet PrayersTableView *prayersTableView;
-
-//@property (nonatomic, retain) NSArray *prayers;
+@property (nonatomic, retain) IBOutlet PrayersPaginatedScrollView *prayersScrollView;
 
 - (IBAction)addPrayer:(id)sender;
+- (IBAction)editMode:(id)sender;
 
 @end

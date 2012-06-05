@@ -30,6 +30,19 @@
 @synthesize scrollView = _scrollView;
 @synthesize tableViews = _tableViews;
 @synthesize currentPage = _currentPage;
+@synthesize editing = _editing;
+
+- (void) setEditing:(BOOL)editing
+{
+    _editing = editing;
+    
+    // Refresh UI
+    for (UIView *prayerView in self.tableViews) {
+        if ([prayerView isKindOfClass:[PrayersTableView class]]) {
+            [((PrayersTableView*) prayerView) setEditing:editing];
+        }
+    }
+}
 
 - (id) initWithCoder:(NSCoder *)aDecoder
 {
@@ -133,6 +146,7 @@
     
     if (page == 0) {
         PrayersTableView *allPrayersTableView = [[PrayersTableView alloc] initWithFrame:CGRectMake(0, 0, self.scrollView.frame.size.width, self.scrollView.frame.size.height) PrayerCategory:nil];
+        [allPrayersTableView setEditing:self.editing];
         
         return allPrayersTableView;
     } else 
@@ -141,6 +155,7 @@
         NSLog(@"Category: %@", category);
         
         PrayersTableView *prayersTableView = [[PrayersTableView alloc] initWithFrame:CGRectMake(0, 0, self.scrollView.frame.size.width, self.scrollView.frame.size.height) PrayerCategory:category];
+        [prayersTableView setEditing:self.editing];
         
         return prayersTableView;
     }

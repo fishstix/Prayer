@@ -15,10 +15,12 @@
     NSMutableArray *_tableViews;
     
     int _currentPage;
+    BOOL _editing;
 }
 
 @property (nonatomic, retain) UIScrollView *scrollView;
 @property (nonatomic, retain) NSMutableArray *tableViews;
 @property (nonatomic, assign) int currentPage;
+@property (nonatomic, assign) BOOL editing;
 
 @end

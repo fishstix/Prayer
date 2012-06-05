@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		720A777E157DFEE900FFB68B /* UICategoryPickerTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 720A777D157DFEE900FFB68B /* UICategoryPickerTextField.m */; };
 		7287202E153421FC0019E5D6 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7287202C153421FC0019E5D6 /* MenuViewController.m */; };
 		7287202F153421FC0019E5D6 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7287202D153421FC0019E5D6 /* MenuViewController.xib */; };
 		72872032153428920019E5D6 /* PrayersPaginatedScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72872031153428920019E5D6 /* PrayersPaginatedScrollView.m */; };
@@ -63,6 +64,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		720A777C157DFEE800FFB68B /* UICategoryPickerTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICategoryPickerTextField.h; sourceTree = "<group>"; };
+		720A777D157DFEE900FFB68B /* UICategoryPickerTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICategoryPickerTextField.m; sourceTree = "<group>"; };
 		7287202B153421FC0019E5D6 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		7287202C153421FC0019E5D6 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		7287202D153421FC0019E5D6 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
@@ -341,6 +344,8 @@
 			children = (
 				72E672A9154CC2480023D88C /* UIRepeatPickerTextField.h */,
 				72E672AA154CC2480023D88C /* UIRepeatPickerTextField.m */,
+				720A777C157DFEE800FFB68B /* UICategoryPickerTextField.h */,
+				720A777D157DFEE900FFB68B /* UICategoryPickerTextField.m */,
 			);
 			name = Input;
 			sourceTree = "<group>";
@@ -526,6 +531,7 @@
 				72E672A7154CB8810023D88C /* UIPickerTextField.m in Sources */,
 				72E672AB154CC2480023D88C /* UIRepeatPickerTextField.m in Sources */,
 				72E672B0154CD7380023D88C /* PrayersCategoryTableHeaderView.m in Sources */,
+				720A777E157DFEE900FFB68B /* UICategoryPickerTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

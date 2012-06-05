@@ -10,9 +10,17 @@
 
 #import "PrayerCoreData.h"
 
+@interface PrayersViewController()
+@property (nonatomic, retain) UIBarButtonItem *editButton;
+@property (nonatomic, retain) UIBarButtonItem *doneButton;
+@end
+
 @implementation PrayersViewController
 
-@synthesize prayersTableView = _prayersTableView;
+@synthesize prayersScrollView = _prayersScrollView;
+
+@synthesize editButton = _editButton;
+@synthesize doneButton = _doneButton;
 
 #pragma mark - View lifecycle
 
@@ -22,24 +30,31 @@
     
     self.title = @"Prayers";
     
-//    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addPrayer:)];
-//    self.navigationItem.rightBarButtonItem = rightButton;
+    self.editButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editMode:)];
+    self.doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(editMode:)];
+    self.navigationItem.rightBarButtonItem = self.editButton;
 }
 
 - (void) viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
-    //[self.prayersTableView setPrayers:[[PrayerCoreData sharedPrayerData] allPrayers]];
 }
 
 #pragma mark -
 #pragma mark AppLogic
 
-- (IBAction)addPrayer:(id)sender
+- (IBAction)editMode:(id)sender
 {
-    [[PrayerCoreData sharedPrayerData] newPrayer];
-  //  [self.prayersTableView setPrayers:[[PrayerCoreData sharedPrayerData] allPrayers]];
+    // Edit Mode?
+    if (self.navigationItem.rightBarButtonItem == self.doneButton) {
+        // Toggle Off
+        self.navigationItem.rightBarButtonItem = self.editButton;
+        self.prayersScrollView.editing = NO;
+    } else {
+        // Toggle On
+        self.navigationItem.rightBarButtonItem = self.doneButton;
+        self.prayersScrollView.editing = YES;
+    }
 }
 
 @end

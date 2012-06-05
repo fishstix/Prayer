@@ -14,6 +14,7 @@
 
 @synthesize titleTextField = _titleTextField;
 @synthesize datePicker = _datePicker;
+@synthesize categoryPicker = _categoryPicker;
 
 @synthesize prayer = _prayer;
 
@@ -30,14 +31,16 @@
     self.datePicker.datePickerMode = UIDatePickerModeDateAndTime;
     self.datePicker.date = self.prayer.remind_at ? self.prayer.remind_at : [NSDate date];
 //    self.reminderDatePicker.minimumDate = [NSDate date];
+    [self.categoryPicker setText:self.prayer.category];
 }
 
 - (void) viewDidDisappear:(BOOL)animated
 {
     self.prayer.title = self.titleTextField.text;
     self.prayer.remind_at = self.datePicker.date;
+    self.prayer.category = self.categoryPicker.text;
     
-    [[PrayerCoreData sharedPrayerData] save];
+    [[PrayerCoreData sharedPrayerData] updatePrayer:self.prayer];
     
     [super viewDidDisappear:animated];
 }
