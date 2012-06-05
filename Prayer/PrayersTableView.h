@@ -11,14 +11,15 @@
 @interface PrayersTableView : AppView <UITableViewDelegate, UITableViewDataSource> {
     UITableView *_prayersTableView;
     
+    NSString *_category;
     NSArray *_prayers;
 }
 
 @property (nonatomic, retain) IBOutlet UITableView *prayersTableView;
 
+@property (nonatomic, retain) NSString *category;
 @property (nonatomic, retain) NSArray *prayers;
 
-//- (id) initWithFrame:(CGRect)frame Prayers:(NSArray*)prayers;
-// Add Prayer
+- (id) initWithFrame:(CGRect)frame PrayerCategory:(NSString*)category;
 
 @end

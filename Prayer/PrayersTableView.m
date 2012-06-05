@@ -8,33 +8,22 @@
 
 #import "PrayersTableView.h"
 
+#import "PrayersCategoryTableHeaderView.h"
+
 #import "MasterController.h"
 #import "Prayer.h"
 #import "PrayerCoreData.h"
 #import "PrayerViewController.h"
 
+@interface PrayersTableView()
+- (void) didAddPrayer:(NSNotification*)notification;
+@end
+
 @implementation PrayersTableView
 
 @synthesize prayersTableView = _prayersTableView;
+@synthesize category = _category;
 @synthesize prayers = _prayers;
-
-- (id) initWithCoder:(NSCoder *)aDecoder
-{
-    self = [super initWithCoder:aDecoder];
-    
-    if (self) {
-        NSArray *nibViews = [[NSBundle mainBundle] loadNibNamed:@"PrayersTableView" owner:self options:nil];
-        [self addSubview:[nibViews objectAtIndex:0]];
-        
-        // Data
-        self.prayers = [NSArray array];
-        // Listen
-//        [self.prayers addObserver:self forKeyPath:@" options:<#(NSKeyValueObservingOptions)#> context:<#(void *)#>
-//        [self addObserver:self forKeyPath:@"prayers" options:NSKeyValueChangeReplacement context:NULL];
-    }
-    
-    return self;
-}
 
 - (void) awakeFromNib 
 {
@@ -45,16 +34,27 @@
     [self addObserver:self forKeyPath:@"prayers" options:NSKeyValueChangeReplacement context:NULL];
 }
 
-- (id) initWithFrame:(CGRect)frame
+- (id) initWithFrame:(CGRect)frame PrayerCategory:(NSString *)category
 {
     self = [super initWithFrame:frame];
     
     if (self) {
         NSArray *nibViews = [[NSBundle mainBundle] loadNibNamed:@"PrayersTableView" owner:self options:nil];
         [self addSubview:[nibViews objectAtIndex:0]];
+
+        // Data
+        self.category = category;
+        self.prayers = [[PrayerCoreData sharedPrayerData] allPrayersForCategory:category];
         
-        [self setPrayers:[[PrayerCoreData sharedPrayerData] allPrayers]];
-//        self.prayers = [NSArray array];
+        // Header
+        PrayersCategoryTableHeaderView *headerView = [[PrayersCategoryTableHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.prayersTableView.frame.size.width, 100) Category:category];
+        [self.prayersTableView setTableHeaderView:headerView];
+        
+        // Footer
+        [self.prayersTableView setTableFooterView:[[UIView alloc] init]];
+        
+        // Observe
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didAddPrayer:) name:kDidAddPrayer object:nil];
     }
     
     return self;
@@ -62,6 +62,15 @@
          
 - (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
+    [self.prayersTableView reloadData];
+}
+
+#pragma mark -
+#pragma mark Data
+
+- (void) didAddPrayer:(NSNotification *)notification
+{
+    self.prayers = [[PrayerCoreData sharedPrayerData] allPrayersForCategory:self.category];
     [self.prayersTableView reloadData];
 }
 

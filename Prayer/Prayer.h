@@ -16,6 +16,7 @@
 @property (nonatomic, retain) NSString * body;
 @property (nonatomic, retain) NSDate * created_at;
 @property (nonatomic, retain) NSDate * remind_at;
+@property (nonatomic, retain) NSString * category;
 @property (nonatomic, assign) BOOL answered;
 
 @end

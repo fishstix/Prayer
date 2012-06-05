@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString *const kDidAddPrayerCategory;
+extern NSString *const kDidRemovePrayerCategory;
+
 @interface PrayerCategory : NSObject
 
 + (void) addCategory:(NSString*)prayerCategory;

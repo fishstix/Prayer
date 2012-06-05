@@ -8,6 +8,9 @@
 
 #import "PrayerCategory.h"
 
+NSString *const kDidAddPrayerCategory = @"DidAddPrayerCategory";
+NSString *const kDidRemovePrayerCategory = @"DidRemovePrayerCategory";
+
 #define kPrayerArrayKey @"prayer_categories"
 
 @implementation PrayerCategory
@@ -22,6 +25,8 @@
     prayerCategories = [prayerCategories arrayByAddingObject:prayerCategory];
     NSData *prayerData = [NSKeyedArchiver archivedDataWithRootObject:prayerCategories];
     [defaults setObject:prayerData forKey:kPrayerArrayKey];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:kDidAddPrayerCategory object:prayerCategory];
 }
 
 + (void) removeCategory:(NSString *)prayerCategory
@@ -31,6 +36,8 @@
     [prayerCategories removeObject:prayerCategory];
     NSData *prayerData = [NSKeyedArchiver archivedDataWithRootObject:prayerCategories];
     [defaults setObject:prayerData forKey:kPrayerArrayKey];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:kDidRemovePrayerCategory object:prayerCategory];
 }
 
 + (NSArray*) getCategories

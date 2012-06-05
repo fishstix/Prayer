@@ -14,9 +14,11 @@
     
     NSMutableArray *_tableViews;
     
+    int _currentPage;
 }
 
 @property (nonatomic, retain) UIScrollView *scrollView;
 @property (nonatomic, retain) NSMutableArray *tableViews;
+@property (nonatomic, assign) int currentPage;
 
 @end

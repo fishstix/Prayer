@@ -60,10 +60,14 @@
 - (IBAction)addCategory:(id)sender
 {
     NSString *newCategory = self.categoryTextField.text;
-    [PrayerCategory addCategory:newCategory];
-
-#warning Handle null cases
     
+    if (newCategory == nil || [newCategory isEqualToString:@""]) {
+        return;
+    }
+    
+    [PrayerCategory addCategory:newCategory];
+    
+    self.categoryTextField.text = @"";
     [self.categoryTextField resignFirstResponder];
 }
 

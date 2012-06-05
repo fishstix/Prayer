@@ -16,15 +16,20 @@
 @interface PrayersPaginatedScrollView() <UIScrollViewDelegate>
 - (void) initialize;
 
+- (void) updateScrollView;
 - (void) loadScrollViewWithPage:(int)page;
 - (UIView*) viewForPage:(int)page;
+
+- (void) didAddPrayerCategory:(NSNotification*) notification;
+- (void) didRemovePrayerCategory:(NSNotification*) notification;
+
 @end
 
 @implementation PrayersPaginatedScrollView
 
 @synthesize scrollView = _scrollView;
 @synthesize tableViews = _tableViews;
-
+@synthesize currentPage = _currentPage;
 
 - (id) initWithCoder:(NSCoder *)aDecoder
 {
@@ -63,20 +68,35 @@
             [self.tableViews addObject:[NSNull null]];
         }
         
+        self.currentPage = 0;
+        [self initialize];
     }
     return self;
 }
 
 - (void) initialize 
 {
-    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * 3, self.scrollView.frame.size.height);
-    [self.scrollView scrollRectToVisible:CGRectMake(0 * self.scrollView.frame.size.width, 0, self.scrollView.frame.size.width, self.scrollView.frame.size.height) animated:NO];
+    [self updateScrollView];
     
-    NSLog(@"Starting index: %d", 0);
+    NSLog(@"Starting index: %d", self.currentPage);
     NSLog(@"Scroll Content Height: %f", self.scrollView.contentSize.height);
-    [self loadScrollViewWithPage:0 - 1];
-    [self loadScrollViewWithPage:0];
-    [self loadScrollViewWithPage:0 + 1];
+    [self loadScrollViewWithPage:self.currentPage - 1];
+    [self loadScrollViewWithPage:self.currentPage];
+    [self loadScrollViewWithPage:self.currentPage + 1];
+    
+    // Listen
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didAddPrayerCategory:) name:kDidAddPrayerCategory object:nil];
+}
+
+#pragma mark - 
+#pragma mark Manage Views
+
+- (void) updateScrollView {
+    int width = self.scrollView.frame.size.width;
+    
+    self.scrollView.contentSize = CGSizeMake(width * [self.tableViews count], self.scrollView.frame.size.height);
+    [self.scrollView scrollRectToVisible:CGRectMake(self.currentPage * width, 0, self.scrollView.frame.size.width, self.scrollView.frame.size.height) animated:NO];
 }
 
 
@@ -111,8 +131,16 @@
     NSArray *prayerCategories = [PrayerCategory getCategories];
 #warning if page == 0	
     
-    if (page <= [prayerCategories count]) {
-        PrayersTableView *prayersTableView = [[PrayersTableView alloc] initWithFrame:CGRectMake(0, 0, self.scrollView.frame.size.width, self.scrollView.frame.size.height)];
+    if (page == 0) {
+        PrayersTableView *allPrayersTableView = [[PrayersTableView alloc] initWithFrame:CGRectMake(0, 0, self.scrollView.frame.size.width, self.scrollView.frame.size.height) PrayerCategory:nil];
+        
+        return allPrayersTableView;
+    } else 
+    if (page != 0 && page <= [prayerCategories count]) {
+        NSString *category = [prayerCategories objectAtIndex:page - 1];
+        NSLog(@"Category: %@", category);
+        
+        PrayersTableView *prayersTableView = [[PrayersTableView alloc] initWithFrame:CGRectMake(0, 0, self.scrollView.frame.size.width, self.scrollView.frame.size.height) PrayerCategory:category];
         
         return prayersTableView;
     }
@@ -151,6 +179,48 @@
     
     AppView *appView = [self.tableViews objectAtIndex:page];
     [appView viewDidAppear];
+    
+    self.currentPage = page;
+}
+
+#pragma mark -
+#pragma mark Prayer Category 
+
+- (void) didAddPrayerCategory:(NSNotification*) notification
+{
+
+    UIView *currentView = [self.tableViews objectAtIndex:(self.currentPage)];
+    UIView *newTableView = [self viewForPage:self.currentPage];
+
+    newTableView.alpha = 0.0f;
+    [newTableView setFrame:CGRectMake(currentView.frame.origin.x + 20, currentView.frame.origin.y + 20, newTableView.frame.size.width - 40, newTableView.frame.size.height - 40)];
+    [self.scrollView insertSubview:newTableView atIndex:0];
+    
+    [self.tableViews insertObject:newTableView atIndex:self.currentPage];
+//    [self updateScrollView];
+    
+    // Animate
+    [UIView animateWithDuration:0.5 animations:^{
+        // Grow
+        newTableView.frame = CGRectMake(currentView.frame.origin.x, currentView.frame.origin.y, currentView.frame.size.width, currentView.frame.size.height);
+        // Appear
+        newTableView.alpha = 1.0f;
+
+        // Move
+        currentView.frame = CGRectMake(currentView.frame.origin.x + self.scrollView.frame.size.width, currentView.frame.origin.y, currentView.frame.size.width, currentView.frame.size.height);
+        
+    }
+                     completion:^(BOOL finished) {
+                         [self updateScrollView];
+                     }];
+    
+//    [self loadScrollViewWithPage:self.currentPage];
+//    [self loadScrollViewWithPage:self.currentPage + 1];
+}
+
+- (void) didRemovePrayerCategory:(NSNotification *)notification
+{
+    
 }
 
 @end

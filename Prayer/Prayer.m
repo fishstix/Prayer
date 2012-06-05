@@ -15,6 +15,7 @@
 @dynamic body;
 @dynamic created_at;
 @dynamic remind_at;
+@dynamic category;
 @dynamic answered;
 
 @end

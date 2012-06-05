@@ -22,8 +22,8 @@
     
     self.title = @"Prayers";
     
-    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addPrayer:)];
-    self.navigationItem.rightBarButtonItem = rightButton;
+//    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addPrayer:)];
+//    self.navigationItem.rightBarButtonItem = rightButton;
 }
 
 - (void) viewDidAppear:(BOOL)animated

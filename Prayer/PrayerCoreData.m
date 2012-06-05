@@ -11,6 +11,9 @@
 #import "AppDelegate.h"
 #import "PrayerNotificationManager.h"
 
+NSString *const kDidAddPrayer = @"DidAddPrayer";
+NSString *const kDidRemovePrayer = @"DidRemovePrayer";
+
 static PrayerCoreData *sharedInstance = NULL;
 
 @interface PrayerCoreData()
@@ -53,6 +56,11 @@ static PrayerCoreData *sharedInstance = NULL;
 
 - (Prayer*) newPrayer
 {
+    return [self newPrayerForCategory:nil];
+}
+
+- (Prayer*) newPrayerForCategory:(NSString *)category
+{
     Prayer *newPrayer = [NSEntityDescription insertNewObjectForEntityForName:@"Prayer" inManagedObjectContext:self.managedObjectContext];
     
     int numberPrayers = [[self allPrayers] count];
@@ -60,8 +68,12 @@ static PrayerCoreData *sharedInstance = NULL;
     [newPrayer setBody:@""];
     [newPrayer setCreated_at:[NSDate date]];
     [newPrayer setAnswered:NO];
+    [newPrayer setCategory:category];
     
     [self save];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:kDidAddPrayer object:newPrayer];
+    
     return newPrayer;
 }
 
@@ -78,11 +90,21 @@ static PrayerCoreData *sharedInstance = NULL;
 
 - (NSArray*) allPrayers
 {
+    return [self allPrayersForCategory:nil];
+}
+
+- (NSArray*) allPrayersForCategory:(NSString *)category
+{
     NSManagedObjectContext *moc = [self managedObjectContext];
     NSEntityDescription *entityDescription = [NSEntityDescription
                                               entityForName:@"Prayer" inManagedObjectContext:moc];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     [request setEntity:entityDescription];
+    
+    if (category) {
+        NSPredicate *categoryPredicate = [NSPredicate predicateWithFormat:[NSString stringWithFormat:@"category == '%@'", category]];
+        [request setPredicate:categoryPredicate];
+    }
     
     // Set example predicate and sort orderings...
     // TODO none needed?    

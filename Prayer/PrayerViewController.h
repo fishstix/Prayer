@@ -8,17 +8,19 @@
 
 #import "AppViewController.h"
 
+#import "UIDateTextField.h"
+
 #import "Prayer.h"
 
 @interface PrayerViewController : AppViewController <UITextFieldDelegate> {
     UITextField *_titleTextField;
-    UIDatePicker *_reminderDatePicker;
+    UIDateTextField *_datePicker;
     
     Prayer *_prayer;
 }
 
 @property (nonatomic, retain) IBOutlet UITextField *titleTextField;
-@property (nonatomic, retain) IBOutlet UIDatePicker *reminderDatePicker;
+@property (nonatomic, retain) IBOutlet UIDateTextField *datePicker;
 
 @property (nonatomic, retain) Prayer *prayer;
 

@@ -13,7 +13,7 @@
 @implementation PrayerViewController
 
 @synthesize titleTextField = _titleTextField;
-@synthesize reminderDatePicker = _reminderDatePicker;
+@synthesize datePicker = _datePicker;
 
 @synthesize prayer = _prayer;
 
@@ -27,14 +27,15 @@
     
 #warning Go back to 30 minutes
 //    self.reminderDatePicker.minuteInterval = 30;
-    self.reminderDatePicker.date = self.prayer.remind_at ? self.prayer.remind_at : [NSDate date];
-    self.reminderDatePicker.minimumDate = [NSDate date];
+    self.datePicker.datePickerMode = UIDatePickerModeDateAndTime;
+    self.datePicker.date = self.prayer.remind_at ? self.prayer.remind_at : [NSDate date];
+//    self.reminderDatePicker.minimumDate = [NSDate date];
 }
 
 - (void) viewDidDisappear:(BOOL)animated
 {
     self.prayer.title = self.titleTextField.text;
-    self.prayer.remind_at = self.reminderDatePicker.date;
+    self.prayer.remind_at = self.datePicker.date;
     
     [[PrayerCoreData sharedPrayerData] save];
     

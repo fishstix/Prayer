@@ -41,6 +41,11 @@
 		72E67297153D582E0023D88C /* PrayerCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E67296153D582E0023D88C /* PrayerCategory.m */; };
 		72E6729A153D5B050023D88C /* AddPrayerCategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E67299153D5B040023D88C /* AddPrayerCategoryView.m */; };
 		72E6729C153D5B210023D88C /* AddPrayerCategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72E6729B153D5B210023D88C /* AddPrayerCategoryView.xib */; };
+		72E672A4154CAC5C0023D88C /* UIDateTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E672A3154CAC5C0023D88C /* UIDateTextField.m */; };
+		72E672A7154CB8810023D88C /* UIPickerTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E672A6154CB8810023D88C /* UIPickerTextField.m */; };
+		72E672AB154CC2480023D88C /* UIRepeatPickerTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E672AA154CC2480023D88C /* UIRepeatPickerTextField.m */; };
+		72E672B0154CD7380023D88C /* PrayersCategoryTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E672AF154CD7380023D88C /* PrayersCategoryTableHeaderView.m */; };
+		72E672B2154CD7960023D88C /* PrayersCategoryTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72E672B1154CD7950023D88C /* PrayersCategoryTableHeaderView.xib */; };
 		72F35274153419F900DA8F81 /* MKDSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F35273153419F900DA8F81 /* MKDSlideViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		72F3527815341A2000DA8F81 /* ButtonMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 72F3527615341A2000DA8F81 /* ButtonMenu.png */; };
 		72F3527915341A2000DA8F81 /* ButtonMenu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72F3527715341A2000DA8F81 /* ButtonMenu@2x.png */; };
@@ -110,6 +115,15 @@
 		72E67298153D5B040023D88C /* AddPrayerCategoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPrayerCategoryView.h; sourceTree = "<group>"; };
 		72E67299153D5B040023D88C /* AddPrayerCategoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPrayerCategoryView.m; sourceTree = "<group>"; };
 		72E6729B153D5B210023D88C /* AddPrayerCategoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddPrayerCategoryView.xib; sourceTree = "<group>"; };
+		72E672A2154CAC5C0023D88C /* UIDateTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDateTextField.h; sourceTree = "<group>"; };
+		72E672A3154CAC5C0023D88C /* UIDateTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDateTextField.m; sourceTree = "<group>"; };
+		72E672A5154CB8810023D88C /* UIPickerTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPickerTextField.h; sourceTree = "<group>"; };
+		72E672A6154CB8810023D88C /* UIPickerTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPickerTextField.m; sourceTree = "<group>"; };
+		72E672A9154CC2480023D88C /* UIRepeatPickerTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIRepeatPickerTextField.h; sourceTree = "<group>"; };
+		72E672AA154CC2480023D88C /* UIRepeatPickerTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIRepeatPickerTextField.m; sourceTree = "<group>"; };
+		72E672AE154CD7380023D88C /* PrayersCategoryTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrayersCategoryTableHeaderView.h; sourceTree = "<group>"; };
+		72E672AF154CD7380023D88C /* PrayersCategoryTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrayersCategoryTableHeaderView.m; sourceTree = "<group>"; };
+		72E672B1154CD7950023D88C /* PrayersCategoryTableHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrayersCategoryTableHeaderView.xib; sourceTree = "<group>"; };
 		72F35272153419F900DA8F81 /* MKDSlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MKDSlideViewController.h; path = ../../mkdslideviewcontroller/MKDSlideViewController.h; sourceTree = "<group>"; };
 		72F35273153419F900DA8F81 /* MKDSlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MKDSlideViewController.m; path = ../../mkdslideviewcontroller/MKDSlideViewController.m; sourceTree = "<group>"; };
 		72F3527615341A2000DA8F81 /* ButtonMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ButtonMenu.png; path = ../../mkdslideviewcontroller/Images/ButtonMenu.png; sourceTree = "<group>"; };
@@ -277,6 +291,9 @@
 		7290E2D31527CB5100CFA19E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				72E672AC154CD7030023D88C /* Table Sub Views */,
+				72E672A8154CC22E0023D88C /* Input */,
+				72E672A1154CAC340023D88C /* Base Input */,
 				7290E2D71527CBAC00CFA19E /* PrayersTableView.h */,
 				7290E2D81527CBAC00CFA19E /* PrayersTableView.m */,
 				7290E2DA1527CD3200CFA19E /* PrayersTableView.xib */,
@@ -306,6 +323,44 @@
 				72E67292153570330023D88C /* QuoteViewController.xib */,
 			);
 			name = Quote;
+			sourceTree = "<group>";
+		};
+		72E672A1154CAC340023D88C /* Base Input */ = {
+			isa = PBXGroup;
+			children = (
+				72E672A2154CAC5C0023D88C /* UIDateTextField.h */,
+				72E672A3154CAC5C0023D88C /* UIDateTextField.m */,
+				72E672A5154CB8810023D88C /* UIPickerTextField.h */,
+				72E672A6154CB8810023D88C /* UIPickerTextField.m */,
+			);
+			name = "Base Input";
+			sourceTree = "<group>";
+		};
+		72E672A8154CC22E0023D88C /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				72E672A9154CC2480023D88C /* UIRepeatPickerTextField.h */,
+				72E672AA154CC2480023D88C /* UIRepeatPickerTextField.m */,
+			);
+			name = Input;
+			sourceTree = "<group>";
+		};
+		72E672AC154CD7030023D88C /* Table Sub Views */ = {
+			isa = PBXGroup;
+			children = (
+				72E672AD154CD7120023D88C /* Header Views */,
+			);
+			name = "Table Sub Views";
+			sourceTree = "<group>";
+		};
+		72E672AD154CD7120023D88C /* Header Views */ = {
+			isa = PBXGroup;
+			children = (
+				72E672AE154CD7380023D88C /* PrayersCategoryTableHeaderView.h */,
+				72E672AF154CD7380023D88C /* PrayersCategoryTableHeaderView.m */,
+				72E672B1154CD7950023D88C /* PrayersCategoryTableHeaderView.xib */,
+			);
+			name = "Header Views";
 			sourceTree = "<group>";
 		};
 		72F3526A1534198900DA8F81 /* lib */ = {
@@ -414,6 +469,7 @@
 				7287202F153421FC0019E5D6 /* MenuViewController.xib in Resources */,
 				72E67294153570330023D88C /* QuoteViewController.xib in Resources */,
 				72E6729C153D5B210023D88C /* AddPrayerCategoryView.xib in Resources */,
+				72E672B2154CD7960023D88C /* PrayersCategoryTableHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +522,10 @@
 				72E67293153570330023D88C /* QuoteViewController.m in Sources */,
 				72E67297153D582E0023D88C /* PrayerCategory.m in Sources */,
 				72E6729A153D5B050023D88C /* AddPrayerCategoryView.m in Sources */,
+				72E672A4154CAC5C0023D88C /* UIDateTextField.m in Sources */,
+				72E672A7154CB8810023D88C /* UIPickerTextField.m in Sources */,
+				72E672AB154CC2480023D88C /* UIRepeatPickerTextField.m in Sources */,
+				72E672B0154CD7380023D88C /* PrayersCategoryTableHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
