@@ -22,6 +22,7 @@
 @implementation PrayersTableView
 
 @synthesize prayersTableView = _prayersTableView;
+@synthesize headerView = _headerView;
 @synthesize category = _category;
 @synthesize prayers = _prayers;
 @synthesize editing = _editing;
@@ -31,6 +32,7 @@
     _editing = editing;
     
     [self.prayersTableView setEditing:editing animated:YES];
+    [self.headerView setEditing:editing];
 }
 
 - (void) awakeFromNib 
@@ -55,8 +57,9 @@
         self.prayers = [[PrayerCoreData sharedPrayerData] allPrayersForCategory:category];
         
         // Header
-        PrayersCategoryTableHeaderView *headerView = [[PrayersCategoryTableHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.prayersTableView.frame.size.width, 100) Category:category];
-        [self.prayersTableView setTableHeaderView:headerView];
+        self.headerView = [[PrayersCategoryTableHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.prayersTableView.frame.size.width, 100) Category:category];
+        [self.headerView setEditing:self.editing];
+        [self.prayersTableView setTableHeaderView:self.headerView];
         
         // Footer
         [self.prayersTableView setTableFooterView:[[UIView alloc] init]];
@@ -132,6 +135,14 @@
         Prayer *prayer = [self.prayers objectAtIndex:indexPath.row];
         [[PrayerCoreData sharedPrayerData] deletePrayer:prayer];
     }
+}
+
+#pragma mark -
+#pragma mark Dealloc
+
+- (void) dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

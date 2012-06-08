@@ -100,6 +100,7 @@
     // Listen
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didAddPrayerCategory:) name:kDidAddPrayerCategory object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didRemovePrayerCategory:) name:kDidRemovePrayerCategory object:nil];
 }
 
 #pragma mark - 
@@ -203,7 +204,6 @@
 
 - (void) didAddPrayerCategory:(NSNotification*) notification
 {
-
     UIView *currentView = [self.tableViews objectAtIndex:(self.currentPage)];
     UIView *newTableView = [self viewForPage:self.currentPage];
 
@@ -228,14 +228,48 @@
                      completion:^(BOOL finished) {
                          [self updateScrollView];
                      }];
-    
-//    [self loadScrollViewWithPage:self.currentPage];
-//    [self loadScrollViewWithPage:self.currentPage + 1];
 }
 
 - (void) didRemovePrayerCategory:(NSNotification *)notification
 {
+    // Assuming current view is being removed?
+    // The one going bye bye
+    UIView *currentView = [self.tableViews objectAtIndex:(self.currentPage)];
+    // Remove
+    [self.tableViews removeObjectAtIndex:self.currentPage];
+    // The one coming in
     
+//    newTableView.alpha = 1.0f;
+//    [newTableView setFrame:CGRectMake(currentView.frame.origin.x + 20, currentView.frame.origin.y + 20, newTableView.frame.size.width - 40, newTableView.frame.size.height - 40)];
+//    [self.scrollView insertSubview:newTableView atIndex:0];
+    
+//    [self.tableViews insertObject:newTableView atIndex:self.currentPage];
+    
+    // Animate
+    [UIView animateWithDuration:0.5 animations:^{
+        // Move Back
+        for (int i = self.currentPage; i < [self.tableViews count]; i++) {
+            UIView *tableView = [self.tableViews objectAtIndex:i];
+            if ([tableView isEqual:[NSNull null]]) {
+                continue;
+            }
+            tableView.frame = CGRectMake(tableView.frame.origin.x - tableView.frame.size.width, tableView.frame.origin.y, tableView.frame.size.width, tableView.frame.size.height);
+        }
+//        
+//        newTableView.frame = CGRectMake(currentView.frame.origin.x, currentView.frame.origin.y, currentView.frame.size.width, currentView.frame.size.height);
+        // Appear
+//        newTableView.alpha = 1.0f;
+        
+        // Move
+        currentView.alpha = 0.0f;
+        currentView.frame = CGRectMake(currentView.frame.origin.x, currentView.frame.origin.y + 300, currentView.frame.size.width, currentView.frame.size.height);
+        
+    }
+                     completion:^(BOOL finished) {
+                         [self updateScrollView];
+                         
+                         [currentView removeFromSuperview];
+                     }];
 }
 
 @end

@@ -8,8 +8,11 @@
 
 #import "AppView.h"
 
+#import "PrayersCategoryTableHeaderView.h"
+
 @interface PrayersTableView : AppView <UITableViewDelegate, UITableViewDataSource> {
     UITableView *_prayersTableView;
+    PrayersCategoryTableHeaderView *_headerView;
     
     NSString *_category;
     NSArray *_prayers;
@@ -18,6 +21,7 @@
 }
 
 @property (nonatomic, retain) IBOutlet UITableView *prayersTableView;
+@property (nonatomic, retain) PrayersCategoryTableHeaderView *headerView;
 
 @property (nonatomic, retain) NSString *category;
 @property (nonatomic, retain) NSArray *prayers;

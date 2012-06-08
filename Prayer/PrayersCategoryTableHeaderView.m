@@ -10,10 +10,18 @@
 
 #import "PrayerCoreData.h"
 #import "Prayer.h"
+#import "PrayerCategory.h"
+
+@interface PrayersCategoryTableHeaderView()
+- (void) refreshUI;
+@end
 
 @implementation PrayersCategoryTableHeaderView
 
+@synthesize editing = _editing;
 @synthesize categoryLabel = _categoryLabel;
+@synthesize addPrayerButton = _addPrayerButton;
+@synthesize deleteCategoryButton = _deleteCategoryButton;
 
 @dynamic category;
 
@@ -36,9 +44,17 @@
         [self addSubview:[nibViews objectAtIndex:0]];
         
         self.category = category;
+        
+        [self refreshUI];
+        [self addObserver:self forKeyPath:@"editing" options:NSKeyValueChangeReplacement context:NULL];
     }
     
     return self;
+}
+
+- (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    [self refreshUI];
 }
 
 #pragma mark -
@@ -47,6 +63,28 @@
 - (IBAction)addPrayer:(id)sender
 {
     [[PrayerCoreData sharedPrayerData] newPrayerForCategory:self.category];
+}
+
+-(IBAction)deleteCategory:(id)sender 
+{
+    [PrayerCategory removeCategory:self.category];
+}
+
+#pragma mark -
+#pragma mark UI
+
+- (void) refreshUI 
+{
+    self.addPrayerButton.hidden = (!self.category || [self.category isEqualToString:@""]) || self.editing;
+    self.deleteCategoryButton.hidden = (!self.category || [self.category isEqualToString:@""]) || !self.editing;
+}
+
+#pragma mark -
+#pragma mark Dealloc
+
+- (void) dealloc
+{
+    [self removeObserver:self forKeyPath:@"editing"];
 }
 
 @end
