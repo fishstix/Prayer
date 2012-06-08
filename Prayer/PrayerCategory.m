@@ -17,6 +17,10 @@ NSString *const kDidRemovePrayerCategory = @"DidRemovePrayerCategory";
 
 + (void) addCategory:(NSString *)prayerCategory
 {
+    if ([[self getCategories] containsObject:prayerCategory]) {
+        return;
+    }
+    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSArray *prayerCategories = (NSArray*) [NSKeyedUnarchiver unarchiveObjectWithData:(NSData*)[defaults objectForKey:kPrayerArrayKey]];
     if (!prayerCategories) {

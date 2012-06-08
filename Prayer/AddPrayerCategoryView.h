@@ -8,7 +8,7 @@
 
 #import "AppView.h"
 
-@interface AddPrayerCategoryView : AppView
+@interface AddPrayerCategoryView : AppView <UITextFieldDelegate>
 {
     UITextField *_categoryTextField;
 }

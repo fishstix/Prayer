@@ -64,12 +64,26 @@
     if (newCategory == nil || [newCategory isEqualToString:@""]) {
         return;
     }
+
+    self.categoryTextField.text = @"";
+    
+    if ([[PrayerCategory getCategories] containsObject:newCategory]) {
+        return;
+    }
     
     [PrayerCategory addCategory:newCategory];
     
-    self.categoryTextField.text = @"";
     [self.categoryTextField resignFirstResponder];
 }
 
+#pragma mark -
+#pragma mark UITextFieldDelegate
+
+- (BOOL) textFieldShouldReturn:(UITextField *)textField 
+{
+    [self addCategory:nil];
+    
+    return YES;
+}
 
 @end
