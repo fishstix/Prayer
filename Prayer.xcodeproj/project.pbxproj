@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		720A777E157DFEE900FFB68B /* UICategoryPickerTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 720A777D157DFEE900FFB68B /* UICategoryPickerTextField.m */; };
+		727E52F315824D3E00534646 /* EmailManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 727E52F215824D3E00534646 /* EmailManager.m */; };
+		727E52F515824F1200534646 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 727E52F415824F1200534646 /* MessageUI.framework */; };
+		727E52FA15826F9900534646 /* FSPaginatedScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 727E52F915826F9900534646 /* FSPaginatedScrollView.m */; };
 		7287202E153421FC0019E5D6 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7287202C153421FC0019E5D6 /* MenuViewController.m */; };
 		7287202F153421FC0019E5D6 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7287202D153421FC0019E5D6 /* MenuViewController.xib */; };
 		72872032153428920019E5D6 /* PrayersPaginatedScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72872031153428920019E5D6 /* PrayersPaginatedScrollView.m */; };
@@ -66,6 +69,11 @@
 /* Begin PBXFileReference section */
 		720A777C157DFEE800FFB68B /* UICategoryPickerTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICategoryPickerTextField.h; sourceTree = "<group>"; };
 		720A777D157DFEE900FFB68B /* UICategoryPickerTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICategoryPickerTextField.m; sourceTree = "<group>"; };
+		727E52F115824D3E00534646 /* EmailManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailManager.h; sourceTree = "<group>"; };
+		727E52F215824D3E00534646 /* EmailManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailManager.m; sourceTree = "<group>"; };
+		727E52F415824F1200534646 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		727E52F815826F9900534646 /* FSPaginatedScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPaginatedScrollView.h; sourceTree = "<group>"; };
+		727E52F915826F9900534646 /* FSPaginatedScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPaginatedScrollView.m; sourceTree = "<group>"; };
 		7287202B153421FC0019E5D6 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		7287202C153421FC0019E5D6 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		7287202D153421FC0019E5D6 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
@@ -139,6 +147,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				727E52F515824F1200534646 /* MessageUI.framework in Frameworks */,
 				72F3528315341B4200DA8F81 /* QuartzCore.framework in Frameworks */,
 				7290E26A1527C37B00CFA19E /* UIKit.framework in Frameworks */,
 				7290E26C1527C37B00CFA19E /* Foundation.framework in Frameworks */,
@@ -161,9 +170,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		727E52EE15824D1500534646 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				727E52F015824D2C00534646 /* Email */,
+			);
+			name = Logic;
+			sourceTree = "<group>";
+		};
+		727E52F015824D2C00534646 /* Email */ = {
+			isa = PBXGroup;
+			children = (
+				727E52F115824D3E00534646 /* EmailManager.h */,
+				727E52F215824D3E00534646 /* EmailManager.m */,
+			);
+			name = Email;
+			sourceTree = "<group>";
+		};
+		727E52F615826F7500534646 /* FS */ = {
+			isa = PBXGroup;
+			children = (
+				727E52F715826F7C00534646 /* Views */,
+			);
+			name = FS;
+			sourceTree = "<group>";
+		};
+		727E52F715826F7C00534646 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				727E52F815826F9900534646 /* FSPaginatedScrollView.h */,
+				727E52F915826F9900534646 /* FSPaginatedScrollView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		7290E25A1527C37A00CFA19E = {
 			isa = PBXGroup;
 			children = (
+				727E52F415824F1200534646 /* MessageUI.framework */,
 				7290E2711527C37B00CFA19E /* Prayer */,
 				7290E28D1527C37B00CFA19E /* PrayerTests */,
 				7290E2681527C37B00CFA19E /* Frameworks */,
@@ -196,6 +240,7 @@
 		7290E2711527C37B00CFA19E /* Prayer */ = {
 			isa = PBXGroup;
 			children = (
+				727E52EE15824D1500534646 /* Logic */,
 				72F3526A1534198900DA8F81 /* lib */,
 				7290E2DF1527E39F00CFA19E /* Notification */,
 				7290E2A21527C45B00CFA19E /* Control */,
@@ -371,6 +416,7 @@
 		72F3526A1534198900DA8F81 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				727E52F615826F7500534646 /* FS */,
 				72F35271153419E100DA8F81 /* MKDSlideControl */,
 			);
 			name = lib;
@@ -532,6 +578,8 @@
 				72E672AB154CC2480023D88C /* UIRepeatPickerTextField.m in Sources */,
 				72E672B0154CD7380023D88C /* PrayersCategoryTableHeaderView.m in Sources */,
 				720A777E157DFEE900FFB68B /* UICategoryPickerTextField.m in Sources */,
+				727E52F315824D3E00534646 /* EmailManager.m in Sources */,
+				727E52FA15826F9900534646 /* FSPaginatedScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

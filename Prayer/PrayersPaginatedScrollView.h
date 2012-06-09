@@ -3,24 +3,17 @@
 //  Prayer
 //
 //  Created by Charles Fisher on 4/10/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 FishStix. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface PrayersPaginatedScrollView : UIView {
-    
-    UIScrollView *_scrollView;
-    
-    NSMutableArray *_tableViews;
-    
-    int _currentPage;
+#import "FSPaginatedScrollView.h"
+
+@interface PrayersPaginatedScrollView : FSPaginatedScrollView {
     BOOL _editing;
 }
 
-@property (nonatomic, retain) UIScrollView *scrollView;
-@property (nonatomic, retain) NSMutableArray *tableViews;
-@property (nonatomic, assign) int currentPage;
 @property (nonatomic, assign) BOOL editing;
 
 @end

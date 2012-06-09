@@ -10,4 +10,6 @@
 
 @interface MenuViewController : UIViewController
 
+- (IBAction)thoughts:(id)sender;
+
 @end
