@@ -8,10 +8,11 @@
 
 #import "AppView.h"
 
+#import "FSTableView.h"
 #import "PrayersCategoryTableHeaderView.h"
 
 @interface PrayersTableView : AppView <UITableViewDelegate, UITableViewDataSource> {
-    UITableView *_prayersTableView;
+    FSTableView *_prayersTableView;
     PrayersCategoryTableHeaderView *_headerView;
     
     NSString *_category;
@@ -20,7 +21,7 @@
     BOOL _editing;
 }
 
-@property (nonatomic, retain) IBOutlet UITableView *prayersTableView;
+@property (nonatomic, retain) IBOutlet FSTableView *prayersTableView;
 @property (nonatomic, retain) PrayersCategoryTableHeaderView *headerView;
 
 @property (nonatomic, retain) NSString *category;

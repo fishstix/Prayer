@@ -3,12 +3,13 @@
 //  Prayer
 //
 //  Created by Charles Fisher on 3/31/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 FishStix. All rights reserved.
 //
 
 #import "PrayersTableView.h"
 
 #import "PrayersCategoryTableHeaderView.h"
+#import "PrayersCategoryTableHeaderSuperView.h"
 
 #import "MasterController.h"
 #import "Prayer.h"
@@ -60,6 +61,9 @@
         self.headerView = [[PrayersCategoryTableHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.prayersTableView.frame.size.width, 100) Category:category];
         [self.headerView setEditing:self.editing];
         [self.prayersTableView setTableHeaderView:self.headerView];
+        // Super
+        UIView *superView = [[PrayersCategoryTableHeaderSuperView alloc] initWithFrame:CGRectMake(0, 0, self.prayersTableView.frame.size.width, 50)];
+        [self.prayersTableView setTableHeaderSuperView:superView];
         
         // Footer
         [self.prayersTableView setTableFooterView:[[UIView alloc] init]];

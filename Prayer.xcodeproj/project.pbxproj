@@ -11,6 +11,9 @@
 		727E52F315824D3E00534646 /* EmailManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 727E52F215824D3E00534646 /* EmailManager.m */; };
 		727E52F515824F1200534646 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 727E52F415824F1200534646 /* MessageUI.framework */; };
 		727E52FA15826F9900534646 /* FSPaginatedScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 727E52F915826F9900534646 /* FSPaginatedScrollView.m */; };
+		727E541615872B3A00534646 /* FSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 727E541515872B3A00534646 /* FSTableView.m */; };
+		727E541A15872DE200534646 /* PrayersCategoryTableHeaderSuperView.m in Sources */ = {isa = PBXBuildFile; fileRef = 727E541915872DE200534646 /* PrayersCategoryTableHeaderSuperView.m */; };
+		727E541C15872E2700534646 /* PrayersCategoryTableHeaderSuperView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 727E541B15872E2700534646 /* PrayersCategoryTableHeaderSuperView.xib */; };
 		7287202E153421FC0019E5D6 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7287202C153421FC0019E5D6 /* MenuViewController.m */; };
 		7287202F153421FC0019E5D6 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7287202D153421FC0019E5D6 /* MenuViewController.xib */; };
 		72872032153428920019E5D6 /* PrayersPaginatedScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72872031153428920019E5D6 /* PrayersPaginatedScrollView.m */; };
@@ -74,6 +77,11 @@
 		727E52F415824F1200534646 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		727E52F815826F9900534646 /* FSPaginatedScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPaginatedScrollView.h; sourceTree = "<group>"; };
 		727E52F915826F9900534646 /* FSPaginatedScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPaginatedScrollView.m; sourceTree = "<group>"; };
+		727E541415872B3A00534646 /* FSTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSTableView.h; sourceTree = "<group>"; };
+		727E541515872B3A00534646 /* FSTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSTableView.m; sourceTree = "<group>"; };
+		727E541815872DE200534646 /* PrayersCategoryTableHeaderSuperView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrayersCategoryTableHeaderSuperView.h; sourceTree = "<group>"; };
+		727E541915872DE200534646 /* PrayersCategoryTableHeaderSuperView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrayersCategoryTableHeaderSuperView.m; sourceTree = "<group>"; };
+		727E541B15872E2700534646 /* PrayersCategoryTableHeaderSuperView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrayersCategoryTableHeaderSuperView.xib; sourceTree = "<group>"; };
 		7287202B153421FC0019E5D6 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		7287202C153421FC0019E5D6 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		7287202D153421FC0019E5D6 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
@@ -198,10 +206,20 @@
 		727E52F715826F7C00534646 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				727E541715872D1800534646 /* Table */,
 				727E52F815826F9900534646 /* FSPaginatedScrollView.h */,
 				727E52F915826F9900534646 /* FSPaginatedScrollView.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		727E541715872D1800534646 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				727E541415872B3A00534646 /* FSTableView.h */,
+				727E541515872B3A00534646 /* FSTableView.m */,
+			);
+			name = Table;
 			sourceTree = "<group>";
 		};
 		7290E25A1527C37A00CFA19E = {
@@ -339,7 +357,7 @@
 		7290E2D31527CB5100CFA19E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				72E672AC154CD7030023D88C /* Table Sub Views */,
+				72E672AC154CD7030023D88C /* TableViews */,
 				72E672A8154CC22E0023D88C /* Input */,
 				72E672A1154CAC340023D88C /* Base Input */,
 				7290E2D71527CBAC00CFA19E /* PrayersTableView.h */,
@@ -395,22 +413,25 @@
 			name = Input;
 			sourceTree = "<group>";
 		};
-		72E672AC154CD7030023D88C /* Table Sub Views */ = {
+		72E672AC154CD7030023D88C /* TableViews */ = {
 			isa = PBXGroup;
 			children = (
-				72E672AD154CD7120023D88C /* Header Views */,
+				72E672AD154CD7120023D88C /* HeaderViews */,
 			);
-			name = "Table Sub Views";
+			name = TableViews;
 			sourceTree = "<group>";
 		};
-		72E672AD154CD7120023D88C /* Header Views */ = {
+		72E672AD154CD7120023D88C /* HeaderViews */ = {
 			isa = PBXGroup;
 			children = (
 				72E672AE154CD7380023D88C /* PrayersCategoryTableHeaderView.h */,
 				72E672AF154CD7380023D88C /* PrayersCategoryTableHeaderView.m */,
 				72E672B1154CD7950023D88C /* PrayersCategoryTableHeaderView.xib */,
+				727E541815872DE200534646 /* PrayersCategoryTableHeaderSuperView.h */,
+				727E541915872DE200534646 /* PrayersCategoryTableHeaderSuperView.m */,
+				727E541B15872E2700534646 /* PrayersCategoryTableHeaderSuperView.xib */,
 			);
-			name = "Header Views";
+			name = HeaderViews;
 			sourceTree = "<group>";
 		};
 		72F3526A1534198900DA8F81 /* lib */ = {
@@ -521,6 +542,7 @@
 				72E67294153570330023D88C /* QuoteViewController.xib in Resources */,
 				72E6729C153D5B210023D88C /* AddPrayerCategoryView.xib in Resources */,
 				72E672B2154CD7960023D88C /* PrayersCategoryTableHeaderView.xib in Resources */,
+				727E541C15872E2700534646 /* PrayersCategoryTableHeaderSuperView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,6 +602,8 @@
 				720A777E157DFEE900FFB68B /* UICategoryPickerTextField.m in Sources */,
 				727E52F315824D3E00534646 /* EmailManager.m in Sources */,
 				727E52FA15826F9900534646 /* FSPaginatedScrollView.m in Sources */,
+				727E541615872B3A00534646 /* FSTableView.m in Sources */,
+				727E541A15872DE200534646 /* PrayersCategoryTableHeaderSuperView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
