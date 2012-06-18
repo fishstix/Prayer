@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		720A777E157DFEE900FFB68B /* UICategoryPickerTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 720A777D157DFEE900FFB68B /* UICategoryPickerTextField.m */; };
+		725E89FA158EBFEC0001D640 /* FSTableHeaderSuperView.m in Sources */ = {isa = PBXBuildFile; fileRef = 725E89F9158EBFEC0001D640 /* FSTableHeaderSuperView.m */; };
 		727E52F315824D3E00534646 /* EmailManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 727E52F215824D3E00534646 /* EmailManager.m */; };
 		727E52F515824F1200534646 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 727E52F415824F1200534646 /* MessageUI.framework */; };
 		727E52FA15826F9900534646 /* FSPaginatedScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 727E52F915826F9900534646 /* FSPaginatedScrollView.m */; };
@@ -72,6 +73,8 @@
 /* Begin PBXFileReference section */
 		720A777C157DFEE800FFB68B /* UICategoryPickerTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICategoryPickerTextField.h; sourceTree = "<group>"; };
 		720A777D157DFEE900FFB68B /* UICategoryPickerTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICategoryPickerTextField.m; sourceTree = "<group>"; };
+		725E89F8158EBFEC0001D640 /* FSTableHeaderSuperView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSTableHeaderSuperView.h; sourceTree = "<group>"; };
+		725E89F9158EBFEC0001D640 /* FSTableHeaderSuperView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSTableHeaderSuperView.m; sourceTree = "<group>"; };
 		727E52F115824D3E00534646 /* EmailManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailManager.h; sourceTree = "<group>"; };
 		727E52F215824D3E00534646 /* EmailManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailManager.m; sourceTree = "<group>"; };
 		727E52F415824F1200534646 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -178,6 +181,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		725E89F6158EBFC10001D640 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				725E89F8158EBFEC0001D640 /* FSTableHeaderSuperView.h */,
+				725E89F9158EBFEC0001D640 /* FSTableHeaderSuperView.m */,
+			);
+			name = SubViews;
+			sourceTree = "<group>";
+		};
 		727E52EE15824D1500534646 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +228,7 @@
 		727E541715872D1800534646 /* Table */ = {
 			isa = PBXGroup;
 			children = (
+				725E89F6158EBFC10001D640 /* SubViews */,
 				727E541415872B3A00534646 /* FSTableView.h */,
 				727E541515872B3A00534646 /* FSTableView.m */,
 			);
@@ -604,6 +617,7 @@
 				727E52FA15826F9900534646 /* FSPaginatedScrollView.m in Sources */,
 				727E541615872B3A00534646 /* FSTableView.m in Sources */,
 				727E541A15872DE200534646 /* PrayersCategoryTableHeaderSuperView.m in Sources */,
+				725E89FA158EBFEC0001D640 /* FSTableHeaderSuperView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

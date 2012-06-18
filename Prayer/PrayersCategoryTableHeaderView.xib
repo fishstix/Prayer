@@ -74,6 +74,7 @@
 						<string key="NSFrame">{{208, 31}, {72, 37}}</string>
 						<reference key="NSSuperview" ref="203331436"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -106,7 +107,7 @@
 					<object class="IBUIButton" id="86777056">
 						<reference key="NSNextResponder" ref="203331436"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{163, 31}, {72, 37}}</string>
+						<string key="NSFrame">{{208, 31}, {72, 37}}</string>
 						<reference key="NSSuperview" ref="203331436"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="485793938"/>
@@ -126,11 +127,34 @@
 						<reference key="IBUIFontDescription" ref="1053865633"/>
 						<reference key="IBUIFont" ref="732405865"/>
 					</object>
+					<object class="IBUIButton" id="152330471">
+						<reference key="NSNextResponder" ref="203331436"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{7, 32}, {74, 37}}</string>
+						<reference key="NSSuperview" ref="203331436"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="952488831"/>
+						<string key="NSReuseIdentifierKey">_NS:9</string>
+						<bool key="IBUIOpaque">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<int key="IBUIContentHorizontalAlignment">0</int>
+						<int key="IBUIContentVerticalAlignment">0</int>
+						<int key="IBUIButtonType">1</int>
+						<string key="IBUINormalTitle">Toggle</string>
+						<reference key="IBUIHighlightedTitleColor" ref="881250663"/>
+						<object class="NSColor" key="IBUINormalTitleColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
+						</object>
+						<reference key="IBUINormalTitleShadowColor" ref="88596179"/>
+						<reference key="IBUIFontDescription" ref="1053865633"/>
+						<reference key="IBUIFont" ref="732405865"/>
+					</object>
 				</array>
 				<string key="NSFrameSize">{300, 100}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView" ref="952488831"/>
+				<reference key="NSNextKeyView" ref="152330471"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
@@ -169,6 +193,14 @@
 					<int key="connectionID">11</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">toggleDeleteCategoryButton</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="152330471"/>
+					</object>
+					<int key="connectionID">13</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">addPrayer:</string>
 						<reference key="source" ref="485793938"/>
@@ -185,6 +217,15 @@
 						<int key="IBEventType">7</int>
 					</object>
 					<int key="connectionID">9</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">toggleDeleteCategory:</string>
+						<reference key="source" ref="152330471"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">14</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -213,6 +254,7 @@
 							<reference ref="952488831"/>
 							<reference ref="485793938"/>
 							<reference ref="86777056"/>
+							<reference ref="152330471"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -231,6 +273,11 @@
 						<reference key="object" ref="86777056"/>
 						<reference key="parent" ref="203331436"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">12</int>
+						<reference key="object" ref="152330471"/>
+						<reference key="parent" ref="203331436"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -238,6 +285,7 @@
 				<string key="-1.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="-2.CustomClassName">UIResponder</string>
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="12.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="3.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="4.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="6.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -247,7 +295,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">11</int>
+			<int key="maxID">14</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -257,6 +305,7 @@
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="addPrayer:">id</string>
 						<string key="deleteCategory:">id</string>
+						<string key="toggleDeleteCategory:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
 						<object class="IBActionInfo" key="addPrayer:">
@@ -267,11 +316,16 @@
 							<string key="name">deleteCategory:</string>
 							<string key="candidateClassName">id</string>
 						</object>
+						<object class="IBActionInfo" key="toggleDeleteCategory:">
+							<string key="name">toggleDeleteCategory:</string>
+							<string key="candidateClassName">id</string>
+						</object>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="addPrayerButton">UIButton</string>
 						<string key="categoryLabel">UILabel</string>
 						<string key="deleteCategoryButton">UIButton</string>
+						<string key="toggleDeleteCategoryButton">UIButton</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="addPrayerButton">
@@ -284,6 +338,10 @@
 						</object>
 						<object class="IBToOneOutletInfo" key="deleteCategoryButton">
 							<string key="name">deleteCategoryButton</string>
+							<string key="candidateClassName">UIButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="toggleDeleteCategoryButton">
+							<string key="name">toggleDeleteCategoryButton</string>
 							<string key="candidateClassName">UIButton</string>
 						</object>
 					</dictionary>

@@ -10,4 +10,6 @@
 
 @interface UIRepeatPickerTextField : UIPickerTextField
 
+@property (nonatomic, assign) NSCalendarUnit repeatInterval;
+
 @end

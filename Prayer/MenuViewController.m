@@ -12,6 +12,8 @@
 
 @implementation MenuViewController
 
+@synthesize versionLabel = _versionLabel;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -22,6 +24,13 @@
 }
 
 #pragma mark - View lifecycle
+
+- (void) viewDidLoad
+{
+    [super viewDidLoad];
+    
+    [self.versionLabel setText:[NSString stringWithFormat:@"Version: %@", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]]];
+}
 
 #pragma mark -
 #pragma mark AppLogic

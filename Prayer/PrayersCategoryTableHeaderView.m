@@ -19,9 +19,11 @@
 @implementation PrayersCategoryTableHeaderView
 
 @synthesize editing = _editing;
+@synthesize deleting = _deleting;
 @synthesize categoryLabel = _categoryLabel;
 @synthesize addPrayerButton = _addPrayerButton;
 @synthesize deleteCategoryButton = _deleteCategoryButton;
+@synthesize toggleDeleteCategoryButton = _toggleDeleteCategoryButton;
 
 @dynamic category;
 
@@ -54,6 +56,7 @@
 
 - (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
+    self.deleting = NO;
     [self refreshUI];
 }
 
@@ -70,13 +73,20 @@
     [PrayerCategory removeCategory:self.category];
 }
 
+- (IBAction)toggleDeleteCategory:(id)sender
+{
+    self.deleting = !self.deleting;
+    [self refreshUI];
+}
+
 #pragma mark -
 #pragma mark UI
 
 - (void) refreshUI 
 {
     self.addPrayerButton.hidden = (!self.category || [self.category isEqualToString:@""]) || self.editing;
-    self.deleteCategoryButton.hidden = (!self.category || [self.category isEqualToString:@""]) || !self.editing;
+    self.deleteCategoryButton.hidden = (!self.category || [self.category isEqualToString:@""]) || !self.editing || !self.deleting;
+    self.toggleDeleteCategoryButton.hidden = (!self.category || [self.category isEqualToString:@""]) || !self.editing;
 }
 
 #pragma mark -

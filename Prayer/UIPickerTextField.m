@@ -204,7 +204,9 @@
 
 - (void) pickerView:(id)picker didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-     self.pickerTextView.text = [self.pickerValues objectAtIndex:row];
+    if (row >= 0 && row < self.pickerValues.count && self.pickerValues.count > 0) {
+        self.pickerTextView.text = [self.pickerValues objectAtIndex:row];
+    }
 }
 
 - (NSString*) pickerView:(UIPickerView*)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component

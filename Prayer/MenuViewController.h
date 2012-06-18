@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface MenuViewController : UIViewController
+{
+    UILabel *_versionLabel;
+}
+
+@property (nonatomic, retain) IBOutlet UILabel *versionLabel;
 
 - (IBAction)thoughts:(id)sender;
 

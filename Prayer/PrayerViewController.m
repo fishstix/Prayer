@@ -14,6 +14,7 @@
 
 @synthesize titleTextField = _titleTextField;
 @synthesize datePicker = _datePicker;
+@synthesize repeatPicker = _repeatPicker;
 @synthesize categoryPicker = _categoryPicker;
 
 @synthesize prayer = _prayer;
@@ -31,6 +32,7 @@
     self.datePicker.datePickerMode = UIDatePickerModeDateAndTime;
     self.datePicker.date = self.prayer.remind_at ? self.prayer.remind_at : [NSDate date];
 //    self.reminderDatePicker.minimumDate = [NSDate date];
+    self.repeatPicker.repeatInterval = (NSCalendarUnit) self.prayer.recure;
     [self.categoryPicker setText:self.prayer.category];
 }
 
@@ -38,6 +40,7 @@
 {
     self.prayer.title = self.titleTextField.text;
     self.prayer.remind_at = self.datePicker.date;
+    self.prayer.recure = self.repeatPicker.repeatInterval;
     self.prayer.category = self.categoryPicker.text;
     
     [[PrayerCoreData sharedPrayerData] updatePrayer:self.prayer];

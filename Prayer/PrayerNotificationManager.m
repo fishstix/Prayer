@@ -44,6 +44,7 @@ static PrayerNotificationManager *sharedInstance = NULL;
             UILocalNotification *notification = [[UILocalNotification alloc] init];
             
             notification.fireDate = prayer.remind_at;
+            notification.repeatInterval = prayer.recure;
             notification.alertBody = prayer.title;
             notification.userInfo = [NSDictionary dictionaryWithObject:prayer.objectID.URIRepresentation.absoluteString forKey:@"objectID"];
             
