@@ -103,7 +103,7 @@ static PrayerCoreData *sharedInstance = NULL;
     [request setEntity:entityDescription];
     
     if (category) {
-        NSPredicate *categoryPredicate = [NSPredicate predicateWithFormat:[NSString stringWithFormat:@"category == '%@'", category]];
+        NSPredicate *categoryPredicate = [NSPredicate predicateWithFormat:@"category == %@", category];
         [request setPredicate:categoryPredicate];
     }
     

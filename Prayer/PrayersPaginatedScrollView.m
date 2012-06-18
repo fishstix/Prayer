@@ -11,6 +11,7 @@
 #import "PrayersTableView.h"
 #import "AddPrayerCategoryView.h"
 
+#import "PrayerCoreData.h"
 #import "PrayerCategory.h"
 
 @interface PrayersPaginatedScrollView() <UIScrollViewDelegate>
@@ -46,6 +47,11 @@
     self.appViews = [NSMutableArray arrayWithObjects:[NSNull null],[NSNull null],nil];    
     for (NSString *prayerCategory in [PrayerCategory getCategories]) {
         [self.appViews addObject:[NSNull null]];
+    }
+    
+    // Start on page 1 if no prayers
+    if ([[[PrayerCoreData sharedPrayerData] allPrayers] count] == 0) {
+        self.currentPage = 1;
     }
     
     [super initialize];

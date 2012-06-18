@@ -13,7 +13,7 @@
     UITextField *_categoryTextField;
 }
 
-@property (nonatomic, retain) IBOutlet UITextField *categoryTextField;
+@property (nonatomic, strong) IBOutlet UITextField *categoryTextField;
 
 - (IBAction)addCategory:(id)sender;
 

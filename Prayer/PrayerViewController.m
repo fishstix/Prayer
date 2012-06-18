@@ -57,4 +57,15 @@
     return NO;
 }
 
+#pragma mark -
+#pragma mark Share
+
+- (IBAction)share:(id)sender 
+{
+    DLog(@"SHARE!!!!");
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Prayer" message:@"Share with FB, Twitter"
+                                                   delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
+}
+
 @end

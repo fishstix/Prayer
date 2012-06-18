@@ -30,4 +30,6 @@
 
 @property (nonatomic, retain) Prayer *prayer;
 
+- (IBAction)share:(id)sender;
+
 @end

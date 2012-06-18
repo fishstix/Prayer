@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		720A777E157DFEE900FFB68B /* UICategoryPickerTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 720A777D157DFEE900FFB68B /* UICategoryPickerTextField.m */; };
+		72261E2C158ED831007A6D10 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72261E2B158ED831007A6D10 /* Twitter.framework */; };
+		72261E2F158ED836007A6D10 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72261E2E158ED836007A6D10 /* Accounts.framework */; };
+		72261E34158EDA55007A6D10 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72261E32158EDA55007A6D10 /* ShareViewController.m */; };
+		72261E35158EDA55007A6D10 /* ShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72261E33158EDA55007A6D10 /* ShareViewController.xib */; };
+		72261E39158FADCF007A6D10 /* toggle_delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 72261E38158FADCF007A6D10 /* toggle_delete.png */; };
 		725E89FA158EBFEC0001D640 /* FSTableHeaderSuperView.m in Sources */ = {isa = PBXBuildFile; fileRef = 725E89F9158EBFEC0001D640 /* FSTableHeaderSuperView.m */; };
 		727E52F315824D3E00534646 /* EmailManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 727E52F215824D3E00534646 /* EmailManager.m */; };
 		727E52F515824F1200534646 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 727E52F415824F1200534646 /* MessageUI.framework */; };
@@ -44,6 +49,9 @@
 		7290E2DB1527CD3200CFA19E /* PrayersTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7290E2DA1527CD3200CFA19E /* PrayersTableView.xib */; };
 		7290E2DE1527D0B400CFA19E /* PrayerCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7290E2DD1527D0B400CFA19E /* PrayerCoreData.m */; };
 		7290E2E21527E3BA00CFA19E /* PrayerNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7290E2E11527E3BA00CFA19E /* PrayerNotificationManager.m */; };
+		72A353CA158ED2D4002E8D45 /* FSFacebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A353C9158ED2D4002E8D45 /* FSFacebook.m */; };
+		72A35420158ED6FE002E8D45 /* FSSocial.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A3541F158ED6FE002E8D45 /* FSSocial.m */; };
+		72A35423158ED758002E8D45 /* FSTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A35422158ED758002E8D45 /* FSTwitter.m */; };
 		72E67293153570330023D88C /* QuoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E67291153570330023D88C /* QuoteViewController.m */; };
 		72E67294153570330023D88C /* QuoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72E67292153570330023D88C /* QuoteViewController.xib */; };
 		72E67297153D582E0023D88C /* PrayerCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E67296153D582E0023D88C /* PrayerCategory.m */; };
@@ -73,6 +81,12 @@
 /* Begin PBXFileReference section */
 		720A777C157DFEE800FFB68B /* UICategoryPickerTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICategoryPickerTextField.h; sourceTree = "<group>"; };
 		720A777D157DFEE900FFB68B /* UICategoryPickerTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICategoryPickerTextField.m; sourceTree = "<group>"; };
+		72261E2B158ED831007A6D10 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		72261E2E158ED836007A6D10 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		72261E31158EDA55007A6D10 /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
+		72261E32158EDA55007A6D10 /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
+		72261E33158EDA55007A6D10 /* ShareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareViewController.xib; sourceTree = "<group>"; };
+		72261E38158FADCF007A6D10 /* toggle_delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toggle_delete.png; sourceTree = "<group>"; };
 		725E89F8158EBFEC0001D640 /* FSTableHeaderSuperView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSTableHeaderSuperView.h; sourceTree = "<group>"; };
 		725E89F9158EBFEC0001D640 /* FSTableHeaderSuperView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSTableHeaderSuperView.m; sourceTree = "<group>"; };
 		727E52F115824D3E00534646 /* EmailManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailManager.h; sourceTree = "<group>"; };
@@ -129,6 +143,12 @@
 		7290E2DD1527D0B400CFA19E /* PrayerCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrayerCoreData.m; sourceTree = "<group>"; };
 		7290E2E01527E3BA00CFA19E /* PrayerNotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrayerNotificationManager.h; sourceTree = "<group>"; };
 		7290E2E11527E3BA00CFA19E /* PrayerNotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrayerNotificationManager.m; sourceTree = "<group>"; };
+		72A353C8158ED2D4002E8D45 /* FSFacebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSFacebook.h; sourceTree = "<group>"; };
+		72A353C9158ED2D4002E8D45 /* FSFacebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSFacebook.m; sourceTree = "<group>"; };
+		72A3541E158ED6FE002E8D45 /* FSSocial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSocial.h; sourceTree = "<group>"; };
+		72A3541F158ED6FE002E8D45 /* FSSocial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSocial.m; sourceTree = "<group>"; };
+		72A35421158ED758002E8D45 /* FSTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSTwitter.h; sourceTree = "<group>"; };
+		72A35422158ED758002E8D45 /* FSTwitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSTwitter.m; sourceTree = "<group>"; };
 		72E67290153570330023D88C /* QuoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuoteViewController.h; sourceTree = "<group>"; };
 		72E67291153570330023D88C /* QuoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuoteViewController.m; sourceTree = "<group>"; };
 		72E67292153570330023D88C /* QuoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuoteViewController.xib; sourceTree = "<group>"; };
@@ -158,6 +178,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72261E2F158ED836007A6D10 /* Accounts.framework in Frameworks */,
+				72261E2C158ED831007A6D10 /* Twitter.framework in Frameworks */,
 				727E52F515824F1200534646 /* MessageUI.framework in Frameworks */,
 				72F3528315341B4200DA8F81 /* QuartzCore.framework in Frameworks */,
 				7290E26A1527C37B00CFA19E /* UIKit.framework in Frameworks */,
@@ -181,6 +203,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		72261E30158EDA26007A6D10 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				7287202B153421FC0019E5D6 /* MenuViewController.h */,
+				7287202C153421FC0019E5D6 /* MenuViewController.m */,
+				7287202D153421FC0019E5D6 /* MenuViewController.xib */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		72261E36158FADCF007A6D10 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				72261E37158FADCF007A6D10 /* Images */,
+			);
+			name = Resources;
+			path = Prayer/Resources;
+			sourceTree = "<group>";
+		};
+		72261E37158FADCF007A6D10 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				72261E38158FADCF007A6D10 /* toggle_delete.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		725E89F6158EBFC10001D640 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +259,7 @@
 		727E52F615826F7500534646 /* FS */ = {
 			isa = PBXGroup;
 			children = (
+				72A3541D158ED6E7002E8D45 /* Social */,
 				727E52F715826F7C00534646 /* Views */,
 			);
 			name = FS;
@@ -238,9 +288,9 @@
 		7290E25A1527C37A00CFA19E = {
 			isa = PBXGroup;
 			children = (
-				727E52F415824F1200534646 /* MessageUI.framework */,
 				7290E2711527C37B00CFA19E /* Prayer */,
 				7290E28D1527C37B00CFA19E /* PrayerTests */,
+				72261E36158FADCF007A6D10 /* Resources */,
 				7290E2681527C37B00CFA19E /* Frameworks */,
 				7290E2661527C37B00CFA19E /* Products */,
 			);
@@ -258,6 +308,9 @@
 		7290E2681527C37B00CFA19E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				72261E2E158ED836007A6D10 /* Accounts.framework */,
+				72261E2B158ED831007A6D10 /* Twitter.framework */,
+				727E52F415824F1200534646 /* MessageUI.framework */,
 				72F3528215341B4200DA8F81 /* QuartzCore.framework */,
 				7290E2691527C37B00CFA19E /* UIKit.framework */,
 				7290E26B1527C37B00CFA19E /* Foundation.framework */,
@@ -344,6 +397,7 @@
 		7290E2A31527C46E00CFA19E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				72261E30158EDA26007A6D10 /* Menu */,
 				72E6728F153570120023D88C /* Quote */,
 				7290E2A81527C59700CFA19E /* PrayersViewController.h */,
 				7290E2A91527C59700CFA19E /* PrayersViewController.m */,
@@ -351,9 +405,9 @@
 				7290E2CE1527C84A00CFA19E /* PrayerViewController.h */,
 				7290E2CF1527C84A00CFA19E /* PrayerViewController.m */,
 				7290E2D01527C84A00CFA19E /* PrayerViewController.xib */,
-				7287202B153421FC0019E5D6 /* MenuViewController.h */,
-				7287202C153421FC0019E5D6 /* MenuViewController.m */,
-				7287202D153421FC0019E5D6 /* MenuViewController.xib */,
+				72261E31158EDA55007A6D10 /* ShareViewController.h */,
+				72261E32158EDA55007A6D10 /* ShareViewController.m */,
+				72261E33158EDA55007A6D10 /* ShareViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -392,6 +446,35 @@
 				7290E2E11527E3BA00CFA19E /* PrayerNotificationManager.m */,
 			);
 			name = Notification;
+			sourceTree = "<group>";
+		};
+		72A353C7158ED2C2002E8D45 /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+				72A353C8158ED2D4002E8D45 /* FSFacebook.h */,
+				72A353C9158ED2D4002E8D45 /* FSFacebook.m */,
+			);
+			name = Facebook;
+			sourceTree = "<group>";
+		};
+		72A3541C158ED6E0002E8D45 /* Twitter */ = {
+			isa = PBXGroup;
+			children = (
+				72A35421158ED758002E8D45 /* FSTwitter.h */,
+				72A35422158ED758002E8D45 /* FSTwitter.m */,
+			);
+			name = Twitter;
+			sourceTree = "<group>";
+		};
+		72A3541D158ED6E7002E8D45 /* Social */ = {
+			isa = PBXGroup;
+			children = (
+				72A3541E158ED6FE002E8D45 /* FSSocial.h */,
+				72A3541F158ED6FE002E8D45 /* FSSocial.m */,
+				72A3541C158ED6E0002E8D45 /* Twitter */,
+				72A353C7158ED2C2002E8D45 /* Facebook */,
+			);
+			name = Social;
 			sourceTree = "<group>";
 		};
 		72E6728F153570120023D88C /* Quote */ = {
@@ -556,6 +639,8 @@
 				72E6729C153D5B210023D88C /* AddPrayerCategoryView.xib in Resources */,
 				72E672B2154CD7960023D88C /* PrayersCategoryTableHeaderView.xib in Resources */,
 				727E541C15872E2700534646 /* PrayersCategoryTableHeaderSuperView.xib in Resources */,
+				72261E35158EDA55007A6D10 /* ShareViewController.xib in Resources */,
+				72261E39158FADCF007A6D10 /* toggle_delete.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,6 +703,10 @@
 				727E541615872B3A00534646 /* FSTableView.m in Sources */,
 				727E541A15872DE200534646 /* PrayersCategoryTableHeaderSuperView.m in Sources */,
 				725E89FA158EBFEC0001D640 /* FSTableHeaderSuperView.m in Sources */,
+				72A353CA158ED2D4002E8D45 /* FSFacebook.m in Sources */,
+				72A35420158ED6FE002E8D45 /* FSSocial.m in Sources */,
+				72A35423158ED758002E8D45 /* FSTwitter.m in Sources */,
+				72261E34158EDA55007A6D10 /* ShareViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

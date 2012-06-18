@@ -42,7 +42,7 @@
 						<string key="NSFrame">{{20, 39}, {180, 21}}</string>
 						<reference key="NSSuperview" ref="203331436"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="86777056"/>
+						<reference key="NSNextKeyView" ref="485793938"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -71,10 +71,10 @@
 					<object class="IBUIButton" id="485793938">
 						<reference key="NSNextResponder" ref="203331436"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{208, 31}, {72, 37}}</string>
+						<string key="NSFrame">{{240, 35}, {60, 30}}</string>
 						<reference key="NSSuperview" ref="203331436"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
+						<reference key="NSNextKeyView" ref="86777056"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -107,12 +107,13 @@
 					<object class="IBUIButton" id="86777056">
 						<reference key="NSNextResponder" ref="203331436"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{208, 31}, {72, 37}}</string>
+						<string key="NSFrame">{{240, 35}, {60, 30}}</string>
 						<reference key="NSSuperview" ref="203331436"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="485793938"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
+						<float key="IBUIAlpha">0.0</float>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
@@ -130,23 +131,27 @@
 					<object class="IBUIButton" id="152330471">
 						<reference key="NSNextResponder" ref="203331436"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{7, 32}, {74, 37}}</string>
+						<string key="NSFrame">{{-15, 35}, {30, 30}}</string>
 						<reference key="NSSuperview" ref="203331436"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="952488831"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
+						<float key="IBUIAlpha">0.0</float>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<int key="IBUIButtonType">1</int>
-						<string key="IBUINormalTitle">Toggle</string>
 						<reference key="IBUIHighlightedTitleColor" ref="881250663"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="88596179"/>
+						<object class="NSCustomResource" key="IBUINormalBackgroundImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">toggle_delete.png</string>
+						</object>
 						<reference key="IBUIFontDescription" ref="1053865633"/>
 						<reference key="IBUIFont" ref="732405865"/>
 					</object>
@@ -252,9 +257,9 @@
 						<reference key="object" ref="203331436"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="952488831"/>
+							<reference ref="152330471"/>
 							<reference ref="485793938"/>
 							<reference ref="86777056"/>
-							<reference ref="152330471"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -360,6 +365,10 @@
 		</object>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
+		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
+			<string key="NS.key.0">toggle_delete.png</string>
+			<string key="NS.object.0">{29, 32}</string>
+		</object>
 		<string key="IBCocoaTouchPluginVersion">1181</string>
 	</data>
 </archive>

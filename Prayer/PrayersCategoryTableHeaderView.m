@@ -8,6 +8,8 @@
 
 #import "PrayersCategoryTableHeaderView.h"
 
+#import <QuartzCore/QuartzCore.h>
+
 #import "PrayerCoreData.h"
 #import "Prayer.h"
 #import "PrayerCategory.h"
@@ -82,11 +84,70 @@
 #pragma mark -
 #pragma mark UI
 
+#define animation_duration 0.3f
+#define move_over 30
+
 - (void) refreshUI 
 {
-    self.addPrayerButton.hidden = (!self.category || [self.category isEqualToString:@""]) || self.editing;
-    self.deleteCategoryButton.hidden = (!self.category || [self.category isEqualToString:@""]) || !self.editing || !self.deleting;
-    self.toggleDeleteCategoryButton.hidden = (!self.category || [self.category isEqualToString:@""]) || !self.editing;
+    BOOL add = (!self.category || [self.category isEqualToString:@""]) || self.editing;
+    BOOL delete = (!self.category || [self.category isEqualToString:@""]) || !self.editing || !self.deleting;
+    BOOL toggle =  (!self.category || [self.category isEqualToString:@""]) || !self.editing;
+    
+    // ADD
+    if (add && self.addPrayerButton.alpha == 1.0f) {
+        // Hide
+        [UIView animateWithDuration:animation_duration
+                         animations:^{
+                             self.addPrayerButton.alpha = 0.0f;
+                         }];
+    } else if (!add && self.addPrayerButton.alpha == 0.0f) {
+        // Show
+        [UIView animateWithDuration:animation_duration
+                         animations:^{
+                             self.addPrayerButton.alpha = 1.0f;
+                         }];
+    }
+    
+    
+    // DELETE
+    if (delete && self.deleteCategoryButton.alpha == 1.0f) {
+        // HIDE & ROTATE TOGGLE
+        [UIView animateWithDuration:animation_duration
+                         animations:^{
+                             self.toggleDeleteCategoryButton.transform = CGAffineTransformMakeRotation(0);
+                             self.deleteCategoryButton.alpha = 0.0f;
+                         }];
+    } else if (!delete && self.deleteCategoryButton.alpha == 0.0f) {
+        // SHOW & ROTATE TOGGLE
+        [UIView animateWithDuration:animation_duration
+                         animations:^{
+                             self.toggleDeleteCategoryButton.transform = CGAffineTransformMakeRotation(-M_PI_2);
+                             self.deleteCategoryButton.alpha = 1.0f;
+                         }];
+    }
+    
+    // TOGGLE
+    if (toggle && self.toggleDeleteCategoryButton.alpha == 1.0f) {
+        // Hide
+        [UIView animateWithDuration:animation_duration
+                         animations:^{
+                             self.toggleDeleteCategoryButton.center = CGPointMake(self.toggleDeleteCategoryButton.center.x - move_over, self.toggleDeleteCategoryButton.center.y);
+                             self.toggleDeleteCategoryButton.alpha = 0.0f;
+                             
+                             self.categoryLabel.center = CGPointMake(self.categoryLabel.center.x - move_over, self.categoryLabel.center.y);
+                         }];
+    } else if (!toggle && self.toggleDeleteCategoryButton.alpha == 0.0f) {
+        // Show
+        [UIView animateWithDuration:animation_duration
+                         animations:^{
+                             self.toggleDeleteCategoryButton.center = CGPointMake(self.toggleDeleteCategoryButton.center.x + move_over, self.toggleDeleteCategoryButton.center.y);
+                             self.toggleDeleteCategoryButton.alpha = 1.0f;
+                             self.toggleDeleteCategoryButton.transform = CGAffineTransformMakeRotation(0);
+                             
+                             self.categoryLabel.center = CGPointMake(self.categoryLabel.center.x + move_over, self.categoryLabel.center.y);
+                         }];
+
+    }
 }
 
 #pragma mark -
