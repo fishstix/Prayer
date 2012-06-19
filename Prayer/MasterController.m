@@ -13,6 +13,7 @@
 
 #import "MenuViewController.h"
 #import "QuoteViewController.h"
+#import "ShareViewController.h"
 
 static MasterController *sharedInstance = NULL;
 
@@ -76,6 +77,14 @@ static MasterController *sharedInstance = NULL;
     prayerController.prayer = prayer;
 
     [self.rootNavigationController setViewControllers:[NSArray arrayWithObjects:self.rootViewController, prayerController, nil] animated:YES];
+}
+
+- (void) sharePrayer:(Prayer *)prayer
+{
+    ShareViewController *shareController = [[ShareViewController alloc] initWithNibName:@"ShareViewController" bundle:nil];
+    shareController.prayer = prayer;
+    
+    [self.rootNavigationController pushViewController:shareController animated:YES];
 }
 
 @end

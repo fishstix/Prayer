@@ -10,6 +10,9 @@
 
 @interface FSTwitter : NSObject
 
-+ (void) tweet:(NSString*)tweety;
+@property (nonatomic, assign) BOOL sharing;
+
++ (FSTwitter*) sharedTwitterManager;
+- (void) tweet:(NSString*)tweety;
 
 @end

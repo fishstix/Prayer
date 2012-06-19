@@ -30,7 +30,7 @@ static FSSocial *instance = NULL;
 
 - (void) share:(NSString *)tweetOrStatusUpdate
 {
-    [FSTwitter tweet:tweetOrStatusUpdate];
+    [[FSTwitter sharedTwitterManager] tweet:tweetOrStatusUpdate];
     // Facebook
 }
 

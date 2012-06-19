@@ -800,10 +800,12 @@
 		7290E2991527C37B00CFA19E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Charles Fisher (34DN757Z32)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Prayer/Prayer-Prefix.pch";
 				INFOPLIST_FILE = "Prayer/Prayer-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0A8A644B-FB86-4153-9DDC-537770023FCD";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -811,10 +813,12 @@
 		7290E29A1527C37B00CFA19E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Charles Fisher";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Prayer/Prayer-Prefix.pch";
 				INFOPLIST_FILE = "Prayer/Prayer-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "302A58A8-F372-4A2E-A6D3-25DCD06425B3";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

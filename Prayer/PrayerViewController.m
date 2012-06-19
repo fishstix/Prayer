@@ -8,6 +8,7 @@
 
 #import "PrayerViewController.h"
 
+#import "MasterController.h"
 #import "PrayerCoreData.h"
 
 @implementation PrayerViewController
@@ -62,10 +63,7 @@
 
 - (IBAction)share:(id)sender 
 {
-    DLog(@"SHARE!!!!");
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Prayer" message:@"Share with FB, Twitter"
-                                                   delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [alert show];
+    [[MasterController sharedMasterController] sharePrayer:self.prayer];
 }
 
 @end

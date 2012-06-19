@@ -8,37 +8,66 @@
 
 #import "ShareViewController.h"
 
-@interface ShareViewController ()
+#import "FSSocial.h"
+#import "FSFacebook.h"
+#import "FSTwitter.h"
 
+@interface ShareViewController ()
+- (void) share;
+- (void) refreshUI;
 @end
 
 @implementation ShareViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+@synthesize prayerTextView = _prayerTextView;
+@synthesize fbSharing = _fbSharing;
+@synthesize twitterSharing = _twitterSharing;
+
+@synthesize prayer = _prayer;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+
+    // Share Button
+    UIBarButtonItem *shareButton = [[UIBarButtonItem alloc] initWithTitle:@"Share" style:UIBarButtonItemStylePlain target:self action:@selector(share)];
+    self.navigationItem.rightBarButtonItem = shareButton;
+    
+    // Set Prayer Text
+    self.prayerTextView.text = self.prayer.title;
+    
+    // Edit
+    [self.prayerTextView becomeFirstResponder];
+    
+    [self refreshUI];
 }
 
-- (void)viewDidUnload
+#pragma mark -
+#pragma mark Sharing
+
+- (void) share
 {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+    [[FSSocial sharedSocialManager] share:self.prayerTextView.text];
+    
+#warning TODO - network screen
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+- (IBAction)toggleFBSharing:(id)sender
 {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    
+    [self refreshUI];
+}
+
+- (IBAction)toggleTwitterSharing:(id)sender
+{
+    [[FSTwitter sharedTwitterManager] setSharing:![[FSTwitter sharedTwitterManager] sharing]];
+    
+    [self refreshUI];
+}
+
+- (void) refreshUI
+{
+    [self.twitterSharing setBackgroundColor:[[FSTwitter sharedTwitterManager] sharing] ? [UIColor blueColor] : [UIColor grayColor]];
 }
 
 @end

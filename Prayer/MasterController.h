@@ -24,5 +24,6 @@
 - (void) pushController:(UIViewController*)controller;
 
 - (void) presentPrayer:(Prayer*)prayer;
+- (void) sharePrayer:(Prayer*)prayer;
 
 @end

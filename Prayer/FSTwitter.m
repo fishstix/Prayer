@@ -13,8 +13,40 @@
 
 @implementation FSTwitter
 
-+ (void) tweet:(NSString *)tweety
+@dynamic sharing;
+
+#define kTwitterSharingKey @"kTwitterSharingKey"
+
+- (void) setSharing:(BOOL)sharing
 {
+    [[NSUserDefaults standardUserDefaults] setBool:sharing forKey:kTwitterSharingKey];
+}
+
+- (BOOL) sharing
+{
+    return [[NSUserDefaults standardUserDefaults] boolForKey:kTwitterSharingKey];
+}
+
+static FSTwitter *instance = NULL;
+
++ (FSTwitter*) sharedTwitterManager
+{
+    @synchronized(self)
+    {
+        if (instance == NULL) {
+            instance = [[FSTwitter alloc] init];
+        }
+    }
+    
+    return instance;
+}
+
+- (void) tweet:(NSString *)tweety
+{
+    if (!self.sharing) {
+        return;
+    }
+    
     // Create an account store object.
 	ACAccountStore *accountStore = [[ACAccountStore alloc] init];
 	
@@ -36,7 +68,7 @@
 				// Create a request, which in this example, posts a tweet to the user's timeline.
 				// This example uses version 1 of the Twitter API.
 				// This may need to be changed to whichever version is currently appropriate.
-				TWRequest *postRequest = [[TWRequest alloc] initWithURL:[NSURL URLWithString:@"http://api.twitter.com/1/statuses/update.json"] parameters:[NSDictionary dictionaryWithObject:@"Hello. This is a tweet." forKey:@"status"] requestMethod:TWRequestMethodPOST];
+				TWRequest *postRequest = [[TWRequest alloc] initWithURL:[NSURL URLWithString:@"http://api.twitter.com/1/statuses/update.json"] parameters:[NSDictionary dictionaryWithObject:tweety forKey:@"status"] requestMethod:TWRequestMethodPOST];
 				
 				// Set the account used to post the tweet.
 				[postRequest setAccount:twitterAccount];
@@ -44,7 +76,7 @@
 				// Perform the request created above and create a handler block to handle the response.
 				[postRequest performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
 					NSString *output = [NSString stringWithFormat:@"HTTP response status: %i", [urlResponse statusCode]];
-					[self performSelectorOnMainThread:@selector(displayText:) withObject:output waitUntilDone:NO];
+//					[self performSelectorOnMainThread:@selector(displayText:) withObject:output waitUntilDone:NO];
 				}];
 			}
         }
