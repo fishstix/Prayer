@@ -22,6 +22,8 @@
 @synthesize prayerTextView = _prayerTextView;
 @synthesize fbSharing = _fbSharing;
 @synthesize twitterSharing = _twitterSharing;
+@synthesize ios6 = _ios6;
+@synthesize shareButton = _shareButton;
 
 @synthesize prayer = _prayer;
 
@@ -30,8 +32,8 @@
     [super viewDidLoad];
 
     // Share Button
-    UIBarButtonItem *shareButton = [[UIBarButtonItem alloc] initWithTitle:@"Share" style:UIBarButtonItemStylePlain target:self action:@selector(share)];
-    self.navigationItem.rightBarButtonItem = shareButton;
+    self.shareButton = [[UIBarButtonItem alloc] initWithTitle:@"Share" style:UIBarButtonItemStylePlain target:self action:@selector(share)];
+    self.navigationItem.rightBarButtonItem = self.shareButton;
     
     // Set Prayer Text
     self.prayerTextView.text = self.prayer.title;
@@ -40,6 +42,15 @@
     [self.prayerTextView becomeFirstResponder];
     
     [self refreshUI];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshUI_) name:PrayerTwitterSharingDidChange object:nil];
+}
+
+- (void) viewDidUnload
+{
+    [super viewDidUnload];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark -
@@ -65,9 +76,22 @@
     [self refreshUI];
 }
 
+- (void) refreshUI_
+{
+    [self performSelectorOnMainThread:@selector(refreshUI) withObject:nil waitUntilDone:NO];
+}
+
 - (void) refreshUI
 {
+    // Share
+    [self.shareButton setEnabled:[[FSTwitter sharedTwitterManager] sharing]];
+    
+    // Twitter
     [self.twitterSharing setBackgroundColor:[[FSTwitter sharedTwitterManager] sharing] ? [UIColor blueColor] : [UIColor grayColor]];
+    
+    // Facebook
+    [self.fbSharing setEnabled:!SYSTEM_VERSION_LESS_THAN(@"6.0")];
+    [self.ios6 setHidden:!SYSTEM_VERSION_LESS_THAN(@"6.0")];
 }
 
 @end

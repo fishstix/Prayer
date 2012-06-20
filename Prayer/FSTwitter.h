@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#define PrayerTwitterSharingDidChange @"Notification_PrayerTwitterSharingDidChange"
+
 @interface FSTwitter : NSObject
 
 @property (nonatomic, assign) BOOL sharing;

@@ -20,6 +20,19 @@
 - (void) setSharing:(BOOL)sharing
 {
     [[NSUserDefaults standardUserDefaults] setBool:sharing forKey:kTwitterSharingKey];
+    
+    if (sharing) {
+        // Create an account store object.
+        ACAccountStore *accountStore = [[ACAccountStore alloc] init];
+        // Create an account type that ensures Twitter accounts are retrieved.
+        ACAccountType *accountType = [accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
+        [accountStore requestAccessToAccountsWithType:accountType withCompletionHandler:^(BOOL granted, NSError *error) {
+            if(!granted) {
+                [self setSharing:NO];
+                [[NSNotificationCenter defaultCenter] postNotificationName:PrayerTwitterSharingDidChange object:nil];
+            }
+        }];
+    }
 }
 
 - (BOOL) sharing
