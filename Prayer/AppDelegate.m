@@ -25,7 +25,7 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
 
-    // Master Controller
+    // Master Controller - just being initialized
     MasterController *masterController = [[MasterController alloc] initWithAppWindow:self.window];
 
     [self.window makeKeyAndVisible];

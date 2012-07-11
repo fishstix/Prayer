@@ -63,7 +63,7 @@
         [self.prayersTableView setTableHeaderView:self.headerView];
         // Super
         UIView *superView = [[PrayersCategoryTableHeaderSuperView alloc] initWithFrame:CGRectMake(0, 0, self.prayersTableView.frame.size.width, 50)];
-        [self.prayersTableView setTableHeaderSuperView:superView];
+//        [self.prayersTableView setTableHeaderSuperView:superView];
         
         // Footer
         [self.prayersTableView setTableFooterView:[[UIView alloc] init]];

@@ -8,16 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		720A777E157DFEE900FFB68B /* UICategoryPickerTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 720A777D157DFEE900FFB68B /* UICategoryPickerTextField.m */; };
+		7223FBBA159AF40A00A2F7E8 /* libfishstix-ios-sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72B214CE159AF21B00456CE8 /* libfishstix-ios-sdk.a */; };
 		72261E2C158ED831007A6D10 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72261E2B158ED831007A6D10 /* Twitter.framework */; };
 		72261E2F158ED836007A6D10 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72261E2E158ED836007A6D10 /* Accounts.framework */; };
 		72261E34158EDA55007A6D10 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72261E32158EDA55007A6D10 /* ShareViewController.m */; };
 		72261E35158EDA55007A6D10 /* ShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72261E33158EDA55007A6D10 /* ShareViewController.xib */; };
 		72261E39158FADCF007A6D10 /* toggle_delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 72261E38158FADCF007A6D10 /* toggle_delete.png */; };
-		725E89FA158EBFEC0001D640 /* FSTableHeaderSuperView.m in Sources */ = {isa = PBXBuildFile; fileRef = 725E89F9158EBFEC0001D640 /* FSTableHeaderSuperView.m */; };
 		727E52F315824D3E00534646 /* EmailManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 727E52F215824D3E00534646 /* EmailManager.m */; };
 		727E52F515824F1200534646 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 727E52F415824F1200534646 /* MessageUI.framework */; };
-		727E52FA15826F9900534646 /* FSPaginatedScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 727E52F915826F9900534646 /* FSPaginatedScrollView.m */; };
-		727E541615872B3A00534646 /* FSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 727E541515872B3A00534646 /* FSTableView.m */; };
 		727E541A15872DE200534646 /* PrayersCategoryTableHeaderSuperView.m in Sources */ = {isa = PBXBuildFile; fileRef = 727E541915872DE200534646 /* PrayersCategoryTableHeaderSuperView.m */; };
 		727E541C15872E2700534646 /* PrayersCategoryTableHeaderSuperView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 727E541B15872E2700534646 /* PrayersCategoryTableHeaderSuperView.xib */; };
 		7287202E153421FC0019E5D6 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7287202C153421FC0019E5D6 /* MenuViewController.m */; };
@@ -38,13 +36,11 @@
 		7290E2921527C37B00CFA19E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7290E2901527C37B00CFA19E /* InfoPlist.strings */; };
 		7290E2951527C37B00CFA19E /* PrayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7290E2941527C37B00CFA19E /* PrayerTests.m */; };
 		7290E2A11527C44C00CFA19E /* Prayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7290E2A01527C44C00CFA19E /* Prayer.m */; };
-		7290E2A71527C56C00CFA19E /* AppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7290E2A61527C56C00CFA19E /* AppViewController.m */; };
 		7290E2AB1527C59700CFA19E /* PrayersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7290E2A91527C59700CFA19E /* PrayersViewController.m */; };
 		7290E2AC1527C59700CFA19E /* PrayersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7290E2AA1527C59700CFA19E /* PrayersViewController.xib */; };
 		7290E2AF1527C64100CFA19E /* MasterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7290E2AE1527C64100CFA19E /* MasterController.m */; };
 		7290E2D11527C84A00CFA19E /* PrayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7290E2CF1527C84A00CFA19E /* PrayerViewController.m */; };
 		7290E2D21527C84A00CFA19E /* PrayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7290E2D01527C84A00CFA19E /* PrayerViewController.xib */; };
-		7290E2D61527CB8A00CFA19E /* AppView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7290E2D51527CB8900CFA19E /* AppView.m */; };
 		7290E2D91527CBAC00CFA19E /* PrayersTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7290E2D81527CBAC00CFA19E /* PrayersTableView.m */; };
 		7290E2DB1527CD3200CFA19E /* PrayersTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7290E2DA1527CD3200CFA19E /* PrayersTableView.xib */; };
 		7290E2DE1527D0B400CFA19E /* PrayerCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7290E2DD1527D0B400CFA19E /* PrayerCoreData.m */; };
@@ -76,6 +72,20 @@
 			remoteGlobalIDString = 7290E2641527C37B00CFA19E;
 			remoteInfo = Prayer;
 		};
+		72B214CD159AF21B00456CE8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 72B21480159AEC8900456CE8 /* fishstix-ios-sdk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 72B213C3159A27BD00456CE8;
+			remoteInfo = "fishstix-ios-sdk";
+		};
+		72B214CF159AF21B00456CE8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 72B21480159AEC8900456CE8 /* fishstix-ios-sdk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 72B213E3159A27BD00456CE8;
+			remoteInfo = "fishstix-ios-sdkTests";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -87,15 +97,9 @@
 		72261E32158EDA55007A6D10 /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
 		72261E33158EDA55007A6D10 /* ShareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareViewController.xib; sourceTree = "<group>"; };
 		72261E38158FADCF007A6D10 /* toggle_delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toggle_delete.png; sourceTree = "<group>"; };
-		725E89F8158EBFEC0001D640 /* FSTableHeaderSuperView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSTableHeaderSuperView.h; sourceTree = "<group>"; };
-		725E89F9158EBFEC0001D640 /* FSTableHeaderSuperView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSTableHeaderSuperView.m; sourceTree = "<group>"; };
 		727E52F115824D3E00534646 /* EmailManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailManager.h; sourceTree = "<group>"; };
 		727E52F215824D3E00534646 /* EmailManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailManager.m; sourceTree = "<group>"; };
 		727E52F415824F1200534646 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		727E52F815826F9900534646 /* FSPaginatedScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPaginatedScrollView.h; sourceTree = "<group>"; };
-		727E52F915826F9900534646 /* FSPaginatedScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPaginatedScrollView.m; sourceTree = "<group>"; };
-		727E541415872B3A00534646 /* FSTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSTableView.h; sourceTree = "<group>"; };
-		727E541515872B3A00534646 /* FSTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSTableView.m; sourceTree = "<group>"; };
 		727E541815872DE200534646 /* PrayersCategoryTableHeaderSuperView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrayersCategoryTableHeaderSuperView.h; sourceTree = "<group>"; };
 		727E541915872DE200534646 /* PrayersCategoryTableHeaderSuperView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrayersCategoryTableHeaderSuperView.m; sourceTree = "<group>"; };
 		727E541B15872E2700534646 /* PrayersCategoryTableHeaderSuperView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrayersCategoryTableHeaderSuperView.xib; sourceTree = "<group>"; };
@@ -124,8 +128,6 @@
 		7290E2941527C37B00CFA19E /* PrayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrayerTests.m; sourceTree = "<group>"; };
 		7290E29F1527C44C00CFA19E /* Prayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prayer.h; sourceTree = "<group>"; };
 		7290E2A01527C44C00CFA19E /* Prayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Prayer.m; sourceTree = "<group>"; };
-		7290E2A51527C56C00CFA19E /* AppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppViewController.h; sourceTree = "<group>"; };
-		7290E2A61527C56C00CFA19E /* AppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppViewController.m; sourceTree = "<group>"; };
 		7290E2A81527C59700CFA19E /* PrayersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrayersViewController.h; sourceTree = "<group>"; };
 		7290E2A91527C59700CFA19E /* PrayersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrayersViewController.m; sourceTree = "<group>"; };
 		7290E2AA1527C59700CFA19E /* PrayersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrayersViewController.xib; sourceTree = "<group>"; };
@@ -134,8 +136,6 @@
 		7290E2CE1527C84A00CFA19E /* PrayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrayerViewController.h; sourceTree = "<group>"; };
 		7290E2CF1527C84A00CFA19E /* PrayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrayerViewController.m; sourceTree = "<group>"; };
 		7290E2D01527C84A00CFA19E /* PrayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrayerViewController.xib; sourceTree = "<group>"; };
-		7290E2D41527CB8900CFA19E /* AppView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppView.h; sourceTree = "<group>"; };
-		7290E2D51527CB8900CFA19E /* AppView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppView.m; sourceTree = "<group>"; };
 		7290E2D71527CBAC00CFA19E /* PrayersTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrayersTableView.h; sourceTree = "<group>"; };
 		7290E2D81527CBAC00CFA19E /* PrayersTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrayersTableView.m; sourceTree = "<group>"; };
 		7290E2DA1527CD3200CFA19E /* PrayersTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrayersTableView.xib; sourceTree = "<group>"; };
@@ -149,6 +149,7 @@
 		72A3541F158ED6FE002E8D45 /* FSSocial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSocial.m; sourceTree = "<group>"; };
 		72A35421158ED758002E8D45 /* FSTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSTwitter.h; sourceTree = "<group>"; };
 		72A35422158ED758002E8D45 /* FSTwitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSTwitter.m; sourceTree = "<group>"; };
+		72B21480159AEC8900456CE8 /* fishstix-ios-sdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "fishstix-ios-sdk.xcodeproj"; path = "../fishstix-ios-sdk/fishstix-ios-sdk.xcodeproj"; sourceTree = "<group>"; };
 		72E67290153570330023D88C /* QuoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuoteViewController.h; sourceTree = "<group>"; };
 		72E67291153570330023D88C /* QuoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuoteViewController.m; sourceTree = "<group>"; };
 		72E67292153570330023D88C /* QuoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuoteViewController.xib; sourceTree = "<group>"; };
@@ -178,6 +179,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7223FBBA159AF40A00A2F7E8 /* libfishstix-ios-sdk.a in Frameworks */,
 				72261E2F158ED836007A6D10 /* Accounts.framework in Frameworks */,
 				72261E2C158ED831007A6D10 /* Twitter.framework in Frameworks */,
 				727E52F515824F1200534646 /* MessageUI.framework in Frameworks */,
@@ -230,15 +232,6 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
-		725E89F6158EBFC10001D640 /* SubViews */ = {
-			isa = PBXGroup;
-			children = (
-				725E89F8158EBFEC0001D640 /* FSTableHeaderSuperView.h */,
-				725E89F9158EBFEC0001D640 /* FSTableHeaderSuperView.m */,
-			);
-			name = SubViews;
-			sourceTree = "<group>";
-		};
 		727E52EE15824D1500534646 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,29 +253,8 @@
 			isa = PBXGroup;
 			children = (
 				72A3541D158ED6E7002E8D45 /* Social */,
-				727E52F715826F7C00534646 /* Views */,
 			);
 			name = FS;
-			sourceTree = "<group>";
-		};
-		727E52F715826F7C00534646 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				727E541715872D1800534646 /* Table */,
-				727E52F815826F9900534646 /* FSPaginatedScrollView.h */,
-				727E52F915826F9900534646 /* FSPaginatedScrollView.m */,
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
-		727E541715872D1800534646 /* Table */ = {
-			isa = PBXGroup;
-			children = (
-				725E89F6158EBFC10001D640 /* SubViews */,
-				727E541415872B3A00534646 /* FSTableView.h */,
-				727E541515872B3A00534646 /* FSTableView.m */,
-			);
-			name = Table;
 			sourceTree = "<group>";
 		};
 		7290E25A1527C37A00CFA19E = {
@@ -331,10 +303,6 @@
 				7290E29E1527C38800CFA19E /* Data */,
 				7290E27A1527C37B00CFA19E /* AppDelegate.h */,
 				7290E27B1527C37B00CFA19E /* AppDelegate.m */,
-				7290E2A51527C56C00CFA19E /* AppViewController.h */,
-				7290E2A61527C56C00CFA19E /* AppViewController.m */,
-				7290E2D41527CB8900CFA19E /* AppView.h */,
-				7290E2D51527CB8900CFA19E /* AppView.m */,
 				7290E27D1527C37B00CFA19E /* Prayer.xcdatamodeld */,
 				7290E2721527C37B00CFA19E /* Supporting Files */,
 			);
@@ -477,6 +445,15 @@
 			name = Social;
 			sourceTree = "<group>";
 		};
+		72B214C9159AF21B00456CE8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				72B214CE159AF21B00456CE8 /* libfishstix-ios-sdk.a */,
+				72B214D0159AF21B00456CE8 /* fishstix-ios-sdkTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		72E6728F153570120023D88C /* Quote */ = {
 			isa = PBXGroup;
 			children = (
@@ -533,6 +510,7 @@
 		72F3526A1534198900DA8F81 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				72B21480159AEC8900456CE8 /* fishstix-ios-sdk.xcodeproj */,
 				727E52F615826F7500534646 /* FS */,
 				72F35271153419E100DA8F81 /* MKDSlideControl */,
 			);
@@ -615,6 +593,12 @@
 			mainGroup = 7290E25A1527C37A00CFA19E;
 			productRefGroup = 7290E2661527C37B00CFA19E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 72B214C9159AF21B00456CE8 /* Products */;
+					ProjectRef = 72B21480159AEC8900456CE8 /* fishstix-ios-sdk.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				7290E2641527C37B00CFA19E /* Prayer */,
@@ -622,6 +606,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		72B214CE159AF21B00456CE8 /* libfishstix-ios-sdk.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libfishstix-ios-sdk.a";
+			remoteRef = 72B214CD159AF21B00456CE8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		72B214D0159AF21B00456CE8 /* fishstix-ios-sdkTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "fishstix-ios-sdkTests.octest";
+			remoteRef = 72B214CF159AF21B00456CE8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		7290E2631527C37B00CFA19E /* Resources */ = {
@@ -679,11 +680,9 @@
 				7290E27C1527C37B00CFA19E /* AppDelegate.m in Sources */,
 				7290E27F1527C37B00CFA19E /* Prayer.xcdatamodeld in Sources */,
 				7290E2A11527C44C00CFA19E /* Prayer.m in Sources */,
-				7290E2A71527C56C00CFA19E /* AppViewController.m in Sources */,
 				7290E2AB1527C59700CFA19E /* PrayersViewController.m in Sources */,
 				7290E2AF1527C64100CFA19E /* MasterController.m in Sources */,
 				7290E2D11527C84A00CFA19E /* PrayerViewController.m in Sources */,
-				7290E2D61527CB8A00CFA19E /* AppView.m in Sources */,
 				7290E2D91527CBAC00CFA19E /* PrayersTableView.m in Sources */,
 				7290E2DE1527D0B400CFA19E /* PrayerCoreData.m in Sources */,
 				7290E2E21527E3BA00CFA19E /* PrayerNotificationManager.m in Sources */,
@@ -699,10 +698,7 @@
 				72E672B0154CD7380023D88C /* PrayersCategoryTableHeaderView.m in Sources */,
 				720A777E157DFEE900FFB68B /* UICategoryPickerTextField.m in Sources */,
 				727E52F315824D3E00534646 /* EmailManager.m in Sources */,
-				727E52FA15826F9900534646 /* FSPaginatedScrollView.m in Sources */,
-				727E541615872B3A00534646 /* FSTableView.m in Sources */,
 				727E541A15872DE200534646 /* PrayersCategoryTableHeaderSuperView.m in Sources */,
-				725E89FA158EBFEC0001D640 /* FSTableHeaderSuperView.m in Sources */,
 				72A353CA158ED2D4002E8D45 /* FSFacebook.m in Sources */,
 				72A35420158ED6FE002E8D45 /* FSSocial.m in Sources */,
 				72A35423158ED758002E8D45 /* FSTwitter.m in Sources */,
@@ -751,7 +747,7 @@
 		7290E2961527C37B00CFA19E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Charles Fisher (34DN757Z32)";
@@ -768,6 +764,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "../fishstix-ios-sdk/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "17BC89CD-463D-4746-A735-72CEECE6CD81";
 				SDKROOT = iphoneos;
@@ -778,7 +775,7 @@
 		7290E2971527C37B00CFA19E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Charles Fisher (34DN757Z32)";
@@ -788,6 +785,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "../fishstix-ios-sdk/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "17BC89CD-463D-4746-A735-72CEECE6CD81";
@@ -803,6 +801,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Charles Fisher (34DN757Z32)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Prayer/Prayer-Prefix.pch";
+				HEADER_SEARCH_PATHS = "fishstix-ios-sdk/**";
 				INFOPLIST_FILE = "Prayer/Prayer-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0A8A644B-FB86-4153-9DDC-537770023FCD";
@@ -816,6 +815,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Charles Fisher";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Prayer/Prayer-Prefix.pch";
+				HEADER_SEARCH_PATHS = "fishstix-ios-sdk/**";
 				INFOPLIST_FILE = "Prayer/Prayer-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "302A58A8-F372-4A2E-A6D3-25DCD06425B3";
