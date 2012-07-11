@@ -14,6 +14,7 @@
 #import "MenuViewController.h"
 #import "QuoteViewController.h"
 #import "ShareViewController.h"
+#import "CategoriesViewController.h"
 
 static MasterController *sharedInstance = NULL;
 
@@ -85,6 +86,14 @@ static MasterController *sharedInstance = NULL;
     shareController.prayer = prayer;
     
     [self.rootNavigationController pushViewController:shareController animated:YES];
+}
+
+- (void) presentCategories
+{
+    CategoriesViewController *categoriesController = [[CategoriesViewController alloc] initWithNibName:@"CategoriesViewController" bundle:nil];
+    UINavigationController *navCategoriesController = [[UINavigationController alloc] initWithRootViewController:categoriesController];
+    
+    [self.slideController presentModalViewController:navCategoriesController animated:YES];
 }
 
 @end

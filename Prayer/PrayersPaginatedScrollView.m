@@ -97,14 +97,17 @@
 
 - (void) didAddPrayerCategory:(NSNotification*) notification
 {
-    UIView *currentView = [self.appViews objectAtIndex:(self.currentPage)];
-    UIView *newTableView = [self viewForPage:self.currentPage];
+    NSString *newCategory = (NSString*) notification.object;
+    int page = [[PrayerCategory getCategories] indexOfObject:newCategory];
+    
+    UIView *currentView = [self.appViews objectAtIndex:(page + 1)];
+    UIView *newTableView = [self viewForPage:page + 1];
 
     newTableView.alpha = 0.0f;
     [newTableView setFrame:CGRectMake(currentView.frame.origin.x + 20, currentView.frame.origin.y + 20, newTableView.frame.size.width - 40, newTableView.frame.size.height - 40)];
     [self.scrollView insertSubview:newTableView atIndex:0];
     
-    [self.appViews insertObject:newTableView atIndex:self.currentPage];
+    [self.appViews insertObject:newTableView atIndex:page + 1];
 //    [self updateScrollView];
     
     // Animate
@@ -125,11 +128,29 @@
 
 - (void) didRemovePrayerCategory:(NSNotification *)notification
 {
-    // Assuming current view is being removed?
-    // The one going bye bye
-    UIView *currentView = [self.appViews objectAtIndex:(self.currentPage)];
+    NSString *removedCategory = (NSString*) notification.object;
+    
+    // Find page to be deleted
+    int page = 0;
+    for (int i = 0; i < self.appViews.count; i++) {
+        UIView *view = (UIView*) [self.appViews objectAtIndex:i];
+        if (![view isEqual:[NSNull null]] && [view isKindOfClass:[PrayersTableView class]]) {
+            PrayersTableView *tableView = (PrayersTableView*)view;
+            if ([tableView.category isEqualToString:removedCategory]) {
+                page = i;
+                break;
+            }
+        }
+    }
+    
+    // Error handling?
+    if (page == 0) {
+        return;
+    }
+    
+    UIView *currentView = [self.appViews objectAtIndex:page];
     // Remove
-    [self.appViews removeObjectAtIndex:self.currentPage];
+    [self.appViews removeObjectAtIndex:page];
     // The one coming in
     
 //    newTableView.alpha = 1.0f;
@@ -141,7 +162,7 @@
     // Animate
     [UIView animateWithDuration:0.5 animations:^{
         // Move Back
-        for (int i = self.currentPage; i < [self.appViews count]; i++) {
+        for (int i = page; i < [self.appViews count]; i++) {
             UIView *tableView = [self.appViews objectAtIndex:i];
             if ([tableView isEqual:[NSNull null]]) {
                 continue;

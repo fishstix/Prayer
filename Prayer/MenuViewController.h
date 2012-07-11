@@ -15,6 +15,7 @@
 
 @property (nonatomic, retain) IBOutlet UILabel *versionLabel;
 
+- (IBAction)categories:(id)sender;
 - (IBAction)thoughts:(id)sender;
 
 @end

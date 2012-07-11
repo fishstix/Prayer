@@ -25,5 +25,6 @@
 
 - (void) presentPrayer:(Prayer*)prayer;
 - (void) sharePrayer:(Prayer*)prayer;
+- (void) presentCategories;
 
 @end

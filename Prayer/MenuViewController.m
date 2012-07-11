@@ -8,7 +8,9 @@
 
 #import "MenuViewController.h"
 
+#import "MasterController.h"
 #import "EmailManager.h"
+
 
 @implementation MenuViewController
 
@@ -34,6 +36,11 @@
 
 #pragma mark -
 #pragma mark AppLogic
+
+-(IBAction)categories:(id)sender
+{
+    [[MasterController sharedMasterController] presentCategories];
+}
 
 - (IBAction)thoughts:(id)sender
 {

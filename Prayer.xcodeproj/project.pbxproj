@@ -48,6 +48,8 @@
 		72A353CA158ED2D4002E8D45 /* FSFacebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A353C9158ED2D4002E8D45 /* FSFacebook.m */; };
 		72A35420158ED6FE002E8D45 /* FSSocial.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A3541F158ED6FE002E8D45 /* FSSocial.m */; };
 		72A35423158ED758002E8D45 /* FSTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A35422158ED758002E8D45 /* FSTwitter.m */; };
+		72C73BEB15AD595D00FCA626 /* CategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C73BE915AD595D00FCA626 /* CategoriesViewController.m */; };
+		72C73BEC15AD595D00FCA626 /* CategoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72C73BEA15AD595D00FCA626 /* CategoriesViewController.xib */; };
 		72E67293153570330023D88C /* QuoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E67291153570330023D88C /* QuoteViewController.m */; };
 		72E67294153570330023D88C /* QuoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72E67292153570330023D88C /* QuoteViewController.xib */; };
 		72E67297153D582E0023D88C /* PrayerCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E67296153D582E0023D88C /* PrayerCategory.m */; };
@@ -150,6 +152,9 @@
 		72A35421158ED758002E8D45 /* FSTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSTwitter.h; sourceTree = "<group>"; };
 		72A35422158ED758002E8D45 /* FSTwitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSTwitter.m; sourceTree = "<group>"; };
 		72B21480159AEC8900456CE8 /* fishstix-ios-sdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "fishstix-ios-sdk.xcodeproj"; path = "../fishstix-ios-sdk/fishstix-ios-sdk.xcodeproj"; sourceTree = "<group>"; };
+		72C73BE815AD595D00FCA626 /* CategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesViewController.h; sourceTree = "<group>"; };
+		72C73BE915AD595D00FCA626 /* CategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesViewController.m; sourceTree = "<group>"; };
+		72C73BEA15AD595D00FCA626 /* CategoriesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoriesViewController.xib; sourceTree = "<group>"; };
 		72E67290153570330023D88C /* QuoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuoteViewController.h; sourceTree = "<group>"; };
 		72E67291153570330023D88C /* QuoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuoteViewController.m; sourceTree = "<group>"; };
 		72E67292153570330023D88C /* QuoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuoteViewController.xib; sourceTree = "<group>"; };
@@ -365,6 +370,7 @@
 		7290E2A31527C46E00CFA19E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				72C73BE715AD582300FCA626 /* Categories */,
 				72261E30158EDA26007A6D10 /* Menu */,
 				72E6728F153570120023D88C /* Quote */,
 				7290E2A81527C59700CFA19E /* PrayersViewController.h */,
@@ -452,6 +458,16 @@
 				72B214D0159AF21B00456CE8 /* fishstix-ios-sdkTests.octest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		72C73BE715AD582300FCA626 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				72C73BE815AD595D00FCA626 /* CategoriesViewController.h */,
+				72C73BE915AD595D00FCA626 /* CategoriesViewController.m */,
+				72C73BEA15AD595D00FCA626 /* CategoriesViewController.xib */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		72E6728F153570120023D88C /* Quote */ = {
@@ -642,6 +658,7 @@
 				727E541C15872E2700534646 /* PrayersCategoryTableHeaderSuperView.xib in Resources */,
 				72261E35158EDA55007A6D10 /* ShareViewController.xib in Resources */,
 				72261E39158FADCF007A6D10 /* toggle_delete.png in Resources */,
+				72C73BEC15AD595D00FCA626 /* CategoriesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -703,6 +720,7 @@
 				72A35420158ED6FE002E8D45 /* FSSocial.m in Sources */,
 				72A35423158ED758002E8D45 /* FSTwitter.m in Sources */,
 				72261E34158EDA55007A6D10 /* ShareViewController.m in Sources */,
+				72C73BEB15AD595D00FCA626 /* CategoriesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
